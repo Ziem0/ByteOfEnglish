@@ -1,0 +1,1 @@
+create table if not exists words(id INTEGER PRIMARY KEY AUTOINCREMENT, eng TXT, pl TXT, statusID INTEGER NOT NULL DEFAULT 1, date TXT, hour TXT, repeated INTEGER, FOREIGN KEY(statusID) references status(id) on DELETE CASCADE);

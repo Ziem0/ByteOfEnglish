@@ -1,1 +1,1 @@
-java -classpath out/production/EasyEnglish app.App
+java -cp target/partOne-1.0-SNAPSHOT.jar com.english.partOne.app.App
