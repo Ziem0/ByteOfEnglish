@@ -2,92 +2,16 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="bcca4017-2d96-4edd-b7dd-190edb111334" name="Default" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/codeStyles/Project.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_google_code_findbugs_jsr305_3_0_2.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_google_errorprone_error_prone_annotations_2_1_3.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_google_guava_guava_25_1_jre.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_google_j2objc_j2objc_annotations_1_1.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_checkerframework_checker_qual_2_0_0.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_codehaus_mojo_animal_sniffer_annotations_1_14.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_flywaydb_flyway_core_5_1_4.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_xerial_sqlite_jdbc_3_23_1.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/client/client.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/partOne/partOne.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/partOne/pom.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/partTwo/partTwo.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/partTwo/pom.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/partTwo/src/main/java/com/english/partTwo/App.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/partTwo/src/main/java/com/english/partTwo/dao/DataBaseConnection.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/partOne/.idea/misc.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/partOne/.idea/modules.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/partOne/.idea/uiDesigner.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/partOne/.idea/vcs.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/partOne/.idea/workspace.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/partOne/EasyEnglish.iml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/partOne/compile.sh" beforeDir="false" afterPath="$PROJECT_DIR$/partOne/compile.sh" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/partOne/out/production/EasyEnglish/UI/AppCommands.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/partOne/out/production/EasyEnglish/UI/Command.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/partOne/out/production/EasyEnglish/UI/CommonlyITCommands.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/partOne/out/production/EasyEnglish/app/App.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/partOne/out/production/EasyEnglish/backup/resources/commonlySentences.csv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/partOne/out/production/EasyEnglish/backup/resources/commonlySentencesChecker.csv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/partOne/out/production/EasyEnglish/backup/resources/gramma.csv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/partOne/out/production/EasyEnglish/backup/resources/grammaSentences.csv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/partOne/out/production/EasyEnglish/backup/resources/grammaSentencesChecker.csv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/partOne/out/production/EasyEnglish/backup/resources/itSentences.csv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/partOne/out/production/EasyEnglish/backup/resources/itSentencesChecker.csv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/partOne/out/production/EasyEnglish/controllers/ControllerInput.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/partOne/out/production/EasyEnglish/controllers/TranslatorController.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/partOne/out/production/EasyEnglish/dao/Dao.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/partOne/out/production/EasyEnglish/dao/Loader.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/partOne/out/production/EasyEnglish/dao/Saver.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/partOne/out/production/EasyEnglish/exceptions/WrongNumberExceptions.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/partOne/out/production/EasyEnglish/models/SentenceRegistry.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/partOne/out/production/EasyEnglish/models/Translator$1.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/partOne/out/production/EasyEnglish/models/Translator$2.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/partOne/out/production/EasyEnglish/models/Translator$Sentence.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/partOne/out/production/EasyEnglish/models/Translator.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/partOne/out/production/EasyEnglish/models/TranslatorFunctions.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/partOne/out/production/EasyEnglish/resources/commonlySentences.csv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/partOne/out/production/EasyEnglish/resources/commonlySentencesChecker.csv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/partOne/out/production/EasyEnglish/resources/gramma.csv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/partOne/out/production/EasyEnglish/resources/grammaSentences.csv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/partOne/out/production/EasyEnglish/resources/grammaSentencesChecker.csv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/partOne/out/production/EasyEnglish/resources/itSentences.csv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/partOne/out/production/EasyEnglish/resources/itSentencesChecker.csv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/partOne/run.sh" beforeDir="false" afterPath="$PROJECT_DIR$/partOne/run.sh" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/partOne/src/UI/AppCommands.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/partOne/src/UI/Command.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/partOne/src/UI/CommonlyITCommands.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/partOne/src/app/App.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/partOne/src/backup/resources/commonlySentences.csv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/partOne/src/backup/resources/commonlySentencesChecker.csv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/partOne/src/backup/resources/gramma.csv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/partOne/src/backup/resources/grammaSentences.csv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/partOne/src/backup/resources/grammaSentencesChecker.csv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/partOne/src/backup/resources/itSentences.csv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/partOne/src/backup/resources/itSentencesChecker.csv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/partOne/src/controllers/ControllerInput.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/partOne/src/controllers/TranslatorController.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/partOne/src/dao/Dao.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/partOne/src/dao/Loader.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/partOne/src/dao/Saver.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/partOne/src/exceptions/WrongNumberExceptions.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/partOne/src/models/SentenceRegistry.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/partOne/src/models/Translator.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/partOne/src/models/TranslatorFunctions.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/partOne/src/resources/commonlySentences.csv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/partOne/src/resources/commonlySentencesChecker.csv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/partOne/src/resources/gramma.csv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/partOne/src/resources/grammaSentences.csv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/partOne/src/resources/grammaSentencesChecker.csv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/partOne/src/resources/itSentences.csv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/partOne/src/resources/itSentencesChecker.csv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/partTwo/data.csv" beforeDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/sqldialects.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/partTwo/src/main/java/com/english/partTwo/controller/MainController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/partTwo/src/main/java/com/english/partTwo/exceptions/InvalidIDException.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/partTwo/src/main/java/com/english/partTwo/models/Word.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/partTwo/src/main/java/com/english/partTwo/dao/DataBaseConnection.java" beforeDir="false" afterPath="$PROJECT_DIR$/partTwo/src/main/java/com/english/partTwo/dao/DataBaseConnection.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/partTwo/src/main/java/com/english/partTwo/dao/WordsDao.java" beforeDir="false" afterPath="$PROJECT_DIR$/partTwo/src/main/java/com/english/partTwo/dao/WordsDao.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/partTwo/src/main/resources/data.csv" beforeDir="false" afterPath="$PROJECT_DIR$/partTwo/src/main/resources/data.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/partTwo/src/main/resources/db/migration/V1.0__create_table_words.sql" beforeDir="false" afterPath="$PROJECT_DIR$/partTwo/src/main/resources/db/migration/V1.0__create_table_words.sql" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/partTwo/src/main/resources/words.db" beforeDir="false" afterPath="$PROJECT_DIR$/partTwo/src/main/resources/words.db" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/target/" />
     <ignored path="$PROJECT_DIR$/partOne/target/" />
@@ -117,7 +41,7 @@
       <file leaf-file-name="pom.xml" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/partTwo/pom.xml">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="501">
+            <state relative-caret-position="960">
               <caret line="64" selection-start-line="64" selection-end-line="64" />
             </state>
           </provider>
@@ -132,13 +56,74 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="DataBaseConnection.java" pinned="false" current-in-tab="true">
+      <file leaf-file-name="MainController.java" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/partTwo/src/main/java/com/english/partTwo/controller/MainController.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="45">
+              <caret line="3" column="4" selection-start-line="3" selection-start-column="4" selection-end-line="3" selection-end-column="4" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="DataBaseConnection.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/partTwo/src/main/java/com/english/partTwo/dao/DataBaseConnection.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="456">
-              <caret line="55" selection-start-line="55" selection-end-line="55" />
+            <state>
               <folding>
                 <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="WordsDao.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/partTwo/src/main/java/com/english/partTwo/dao/WordsDao.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state>
+              <caret lean-forward="true" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Word.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/partTwo/src/main/java/com/english/partTwo/models/Word.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state>
+              <folding>
+                <element signature="imports" expanded="true" />
+                <element signature="e#710#711#0" expanded="true" />
+                <element signature="e#735#736#0" expanded="true" />
+                <element signature="e#765#766#0" expanded="true" />
+                <element signature="e#791#792#0" expanded="true" />
+                <element signature="e#820#821#0" expanded="true" />
+                <element signature="e#845#846#0" expanded="true" />
+                <element signature="e#878#879#0" expanded="true" />
+                <element signature="e#907#908#0" expanded="true" />
+                <element signature="e#1013#1014#0" expanded="true" />
+                <element signature="e#1044#1045#0" expanded="true" />
+                <element signature="e#941#942#0" expanded="true" />
+                <element signature="e#968#969#0" expanded="true" />
+                <element signature="e#1002#1003#0" expanded="true" />
+                <element signature="e#1029#1030#0" expanded="true" />
+                <element signature="e#1061#1062#0" expanded="true" />
+                <element signature="e#1092#1093#0" expanded="true" />
+                <element signature="e#1130#1131#0" expanded="true" />
+                <element signature="e#1160#1161#0" expanded="true" />
+                <element signature="e#1196#1197#0" expanded="true" />
+                <element signature="e#1224#1225#0" expanded="true" />
+                <element signature="e#1422#1423#0" expanded="true" />
+                <element signature="e#1457#1458#0" expanded="true" />
+                <element signature="e#1489#1490#0" expanded="true" />
+                <element signature="e#1520#1521#0" expanded="true" />
+                <element signature="e#1347#1348#0" expanded="true" />
+                <element signature="e#1379#1380#0" expanded="true" />
+                <element signature="e#1422#1423#0" expanded="true" />
+                <element signature="e#1454#1455#0" expanded="true" />
+                <element signature="e#1546#1547#0" expanded="true" />
+                <element signature="e#1577#1578#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -178,7 +163,13 @@
         <option value="$PROJECT_DIR$/partTwo/src/main/java/com/english/partTwo/dao/Connection.java" />
         <option value="$PROJECT_DIR$/pom.xml" />
         <option value="$PROJECT_DIR$/partTwo/pom.xml" />
+        <option value="$PROJECT_DIR$/partTwo/src/main/java/com/english/partTwo/dao/StatusDai.java" />
+        <option value="$PROJECT_DIR$/partTwo/src/main/java/com/english/partTwo/dao/StatusDao.java" />
         <option value="$PROJECT_DIR$/partTwo/src/main/java/com/english/partTwo/dao/DataBaseConnection.java" />
+        <option value="$PROJECT_DIR$/partTwo/src/main/java/com/english/partTwo/exceptions/InvalidIDException.java" />
+        <option value="$PROJECT_DIR$/partTwo/src/main/java/com/english/partTwo/dao/WordsDao.java" />
+        <option value="$PROJECT_DIR$/partTwo/src/main/java/com/english/partTwo/models/Word.java" />
+        <option value="$PROJECT_DIR$/partTwo/src/main/java/com/english/partTwo/controller/MainController.java" />
       </list>
     </option>
   </component>
@@ -216,28 +207,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="AndroidView">
-        <subPane>
-          <expand>
-            <path>
-              <item name="xxxEnglish" type="1abcf292:AndroidViewProjectNode" />
-              <item name="partTwo" type="e9137016:NonAndroidModuleNode" />
-            </path>
-            <path>
-              <item name="xxxEnglish" type="1abcf292:AndroidViewProjectNode" />
-              <item name="partTwo" type="e9137016:NonAndroidModuleNode" />
-              <item name="java" type="f7eae187:NonAndroidSourceTypeNode" />
-            </path>
-            <path>
-              <item name="xxxEnglish" type="1abcf292:AndroidViewProjectNode" />
-              <item name="partTwo" type="e9137016:NonAndroidModuleNode" />
-              <item name="java" type="f7eae187:NonAndroidSourceTypeNode" />
-              <item name="partTwo" type="462c0819:PsiDirectoryNode" />
-            </path>
-          </expand>
-          <select />
-        </subPane>
-      </pane>
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -288,14 +257,66 @@
               <item name="main" type="462c0819:PsiDirectoryNode" />
               <item name="java" type="462c0819:PsiDirectoryNode" />
               <item name="partTwo" type="462c0819:PsiDirectoryNode" />
+              <item name="controller" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="xxxEnglish" type="b2602c69:ProjectViewProjectNode" />
+              <item name="xxxEnglish" type="462c0819:PsiDirectoryNode" />
+              <item name="partTwo" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="partTwo" type="462c0819:PsiDirectoryNode" />
               <item name="dao" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="xxxEnglish" type="b2602c69:ProjectViewProjectNode" />
+              <item name="xxxEnglish" type="462c0819:PsiDirectoryNode" />
+              <item name="partTwo" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="partTwo" type="462c0819:PsiDirectoryNode" />
+              <item name="exceptions" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="xxxEnglish" type="b2602c69:ProjectViewProjectNode" />
+              <item name="xxxEnglish" type="462c0819:PsiDirectoryNode" />
+              <item name="partTwo" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="partTwo" type="462c0819:PsiDirectoryNode" />
+              <item name="models" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
         </subPane>
       </pane>
-      <pane id="PackagesPane" />
       <pane id="Scope" />
+      <pane id="PackagesPane" />
+      <pane id="AndroidView">
+        <subPane>
+          <expand>
+            <path>
+              <item name="xxxEnglish" type="1abcf292:AndroidViewProjectNode" />
+              <item name="partTwo" type="e9137016:NonAndroidModuleNode" />
+            </path>
+            <path>
+              <item name="xxxEnglish" type="1abcf292:AndroidViewProjectNode" />
+              <item name="partTwo" type="e9137016:NonAndroidModuleNode" />
+              <item name="java" type="f7eae187:NonAndroidSourceTypeNode" />
+            </path>
+            <path>
+              <item name="xxxEnglish" type="1abcf292:AndroidViewProjectNode" />
+              <item name="partTwo" type="e9137016:NonAndroidModuleNode" />
+              <item name="java" type="f7eae187:NonAndroidSourceTypeNode" />
+              <item name="partTwo" type="462c0819:PsiDirectoryNode" />
+            </path>
+          </expand>
+          <select />
+        </subPane>
+      </pane>
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -321,7 +342,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Application.DataBaseConnection">
+  <component name="RunManager" selected="Application.Word">
     <configuration name="App" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="com.english.partTwo.App" />
       <module name="partTwo" />
@@ -340,6 +361,17 @@
       <extension name="coverage">
         <pattern>
           <option name="PATTERN" value="com.english.partTwo.dao.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+    </configuration>
+    <configuration name="Word" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.english.partTwo.models.Word" />
+      <module name="partTwo" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.english.partTwo.models.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -470,9 +502,11 @@
       <item itemvalue="Maven.partTwo package" />
       <item itemvalue="Application.App" />
       <item itemvalue="Application.DataBaseConnection" />
+      <item itemvalue="Application.Word" />
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="Application.Word" />
         <item itemvalue="Application.DataBaseConnection" />
         <item itemvalue="Application.App" />
       </list>
@@ -489,12 +523,13 @@
       <option name="presentableId" value="Default" />
       <updated>1531243450215</updated>
       <workItem from="1531243451446" duration="2273000" />
-      <workItem from="1531307763567" duration="13929000" />
+      <workItem from="1531307763567" duration="24763000" />
+      <workItem from="1531397206656" duration="4766000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="16202000" />
+    <option name="totallyTimeSpent" value="31802000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="27" width="1366" height="741" extended-state="6" />
@@ -503,7 +538,7 @@
       <window_info anchor="right" id="Palette" order="3" />
       <window_info anchor="bottom" id="TODO" order="6" />
       <window_info id="DB Browser" order="2" />
-      <window_info anchor="bottom" id="Messages" />
+      <window_info anchor="bottom" id="Messages" order="7" weight="0.32854864" />
       <window_info anchor="right" id="Palette&#9;" order="3" />
       <window_info id="Image Layers" order="2" />
       <window_info anchor="bottom" id="DB Execution Console" order="7" />
@@ -512,11 +547,11 @@
       <window_info anchor="right" id="Maven Projects" order="3" />
       <window_info anchor="bottom" id="Database Changes" order="7" show_stripe_button="false" />
       <window_info anchor="bottom" id="Version Control" order="7" />
-      <window_info anchor="bottom" id="Run" order="2" weight="0.32591414" />
+      <window_info anchor="bottom" id="Run" order="2" weight="0.3227345" />
       <window_info anchor="bottom" id="Terminal" order="7" />
       <window_info id="Capture Tool" order="2" />
       <window_info id="Designer" order="2" />
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.26281112" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.17862372" />
       <window_info anchor="right" id="Database" order="3" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
@@ -524,11 +559,11 @@
       <window_info anchor="right" id="Theme Preview" order="3" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
-      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
-      <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
+      <window_info anchor="bottom" id="Message" order="0" />
+      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
       <window_info anchor="bottom" id="Find" order="1" />
     </layout>
   </component>
@@ -539,6 +574,87 @@
     <option name="myLimit" value="2678400000" />
   </component>
   <component name="editorHistoryManager">
+    <entry file="file://$PROJECT_DIR$/pom.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1305">
+          <caret line="87" selection-start-line="87" selection-end-line="87" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/partTwo/pom.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="960">
+          <caret line="64" selection-start-line="64" selection-end-line="64" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/partTwo/src/main/java/com/english/partTwo/App.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="75">
+          <caret line="5" selection-start-line="5" selection-end-line="5" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/partTwo/src/main/java/com/english/partTwo/dao/DataBaseConnection.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="645">
+          <caret line="47" selection-start-line="47" selection-end-line="47" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/partTwo/src/main/java/com/english/partTwo/models/Word.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <caret lean-forward="true" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#710#711#0" expanded="true" />
+            <element signature="e#735#736#0" expanded="true" />
+            <element signature="e#765#766#0" expanded="true" />
+            <element signature="e#791#792#0" expanded="true" />
+            <element signature="e#820#821#0" expanded="true" />
+            <element signature="e#845#846#0" expanded="true" />
+            <element signature="e#878#879#0" expanded="true" />
+            <element signature="e#907#908#0" expanded="true" />
+            <element signature="e#1013#1014#0" expanded="true" />
+            <element signature="e#1044#1045#0" expanded="true" />
+            <element signature="e#941#942#0" expanded="true" />
+            <element signature="e#968#969#0" expanded="true" />
+            <element signature="e#1002#1003#0" expanded="true" />
+            <element signature="e#1029#1030#0" expanded="true" />
+            <element signature="e#1061#1062#0" expanded="true" />
+            <element signature="e#1092#1093#0" expanded="true" />
+            <element signature="e#1130#1131#0" expanded="true" />
+            <element signature="e#1160#1161#0" expanded="true" />
+            <element signature="e#1196#1197#0" expanded="true" />
+            <element signature="e#1224#1225#0" expanded="true" />
+            <element signature="e#1422#1423#0" expanded="true" />
+            <element signature="e#1457#1458#0" expanded="true" />
+            <element signature="e#1489#1490#0" expanded="true" />
+            <element signature="e#1520#1521#0" expanded="true" />
+            <element signature="e#1347#1348#0" expanded="true" />
+            <element signature="e#1379#1380#0" expanded="true" />
+            <element signature="e#1422#1423#0" expanded="true" />
+            <element signature="e#1454#1455#0" expanded="true" />
+            <element signature="e#1546#1547#0" expanded="true" />
+            <element signature="e#1577#1578#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/partTwo/src/main/java/com/english/partTwo/dao/WordsDao.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1350">
+          <caret line="101" lean-forward="true" selection-start-line="101" selection-end-line="101" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/pom.xml">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="330">
@@ -553,13 +669,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/partOne/src/app/App.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="105">
-          <caret line="15" column="36" selection-start-line="15" selection-start-column="36" selection-end-line="15" selection-end-column="36" />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/partOne/src/app/App.java" />
     <entry file="file://$PROJECT_DIR$/partOne/src/main/java/com/english/partOne/UI/AppCommands.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="30">
@@ -581,9 +691,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="75">
           <caret line="5" lean-forward="true" selection-start-line="5" selection-end-line="5" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -612,9 +719,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="75">
           <caret line="5" column="7" lean-forward="true" selection-start-line="5" selection-start-column="7" selection-end-line="5" selection-end-column="7" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -629,9 +733,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="90">
           <caret line="6" lean-forward="true" selection-start-line="6" selection-end-line="6" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -639,9 +740,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state>
           <caret lean-forward="true" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -663,23 +761,90 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="210">
           <caret line="14" selection-start-line="14" selection-end-line="14" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/partTwo/pom.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="960">
+          <caret line="64" selection-start-line="64" selection-end-line="64" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/partTwo/src/main/java/com/english/partTwo/dao/StatusDao.java" />
+    <entry file="file://$PROJECT_DIR$/partTwo/src/main/java/com/english/partTwo/exceptions/InvalidIDException.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="75">
+          <caret line="5" column="5" lean-forward="true" selection-start-line="5" selection-start-column="5" selection-end-line="5" selection-end-column="5" />
           <folding>
-            <element signature="imports" expanded="true" />
+            <element signature="e#139#140#0" expanded="true" />
+            <element signature="e#169#170#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/pom.xml">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="322">
+        <state relative-caret-position="304">
           <caret line="87" selection-start-line="87" selection-end-line="87" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/partTwo/pom.xml">
+    <entry file="file://$PROJECT_DIR$/partTwo/src/main/java/com/english/partTwo/models/Word.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="501">
-          <caret line="64" selection-start-line="64" selection-end-line="64" />
+        <state>
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#710#711#0" expanded="true" />
+            <element signature="e#735#736#0" expanded="true" />
+            <element signature="e#765#766#0" expanded="true" />
+            <element signature="e#791#792#0" expanded="true" />
+            <element signature="e#820#821#0" expanded="true" />
+            <element signature="e#845#846#0" expanded="true" />
+            <element signature="e#878#879#0" expanded="true" />
+            <element signature="e#907#908#0" expanded="true" />
+            <element signature="e#1013#1014#0" expanded="true" />
+            <element signature="e#1044#1045#0" expanded="true" />
+            <element signature="e#941#942#0" expanded="true" />
+            <element signature="e#968#969#0" expanded="true" />
+            <element signature="e#1002#1003#0" expanded="true" />
+            <element signature="e#1029#1030#0" expanded="true" />
+            <element signature="e#1061#1062#0" expanded="true" />
+            <element signature="e#1092#1093#0" expanded="true" />
+            <element signature="e#1130#1131#0" expanded="true" />
+            <element signature="e#1160#1161#0" expanded="true" />
+            <element signature="e#1196#1197#0" expanded="true" />
+            <element signature="e#1224#1225#0" expanded="true" />
+            <element signature="e#1422#1423#0" expanded="true" />
+            <element signature="e#1457#1458#0" expanded="true" />
+            <element signature="e#1489#1490#0" expanded="true" />
+            <element signature="e#1520#1521#0" expanded="true" />
+            <element signature="e#1347#1348#0" expanded="true" />
+            <element signature="e#1379#1380#0" expanded="true" />
+            <element signature="e#1422#1423#0" expanded="true" />
+            <element signature="e#1454#1455#0" expanded="true" />
+            <element signature="e#1546#1547#0" expanded="true" />
+            <element signature="e#1577#1578#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/partTwo/src/main/java/com/english/partTwo/dao/WordsDao.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <caret lean-forward="true" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/partTwo/src/main/java/com/english/partTwo/dao/DataBaseConnection.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -690,13 +855,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/partTwo/src/main/java/com/english/partTwo/dao/DataBaseConnection.java">
+    <entry file="file://$PROJECT_DIR$/partTwo/src/main/java/com/english/partTwo/controller/MainController.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="456">
-          <caret line="55" selection-start-line="55" selection-end-line="55" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
+        <state relative-caret-position="45">
+          <caret line="3" column="4" selection-start-line="3" selection-start-column="4" selection-end-line="3" selection-end-column="4" />
         </state>
       </provider>
     </entry>

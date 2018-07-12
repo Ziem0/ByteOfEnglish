@@ -44,13 +44,15 @@ public class DataBaseConnection {
     private static void getMigration() {
         Flyway fw = new Flyway();
         fw.setDataSource(DB_URL, null, null);
-//        fw.clean();
+        fw.clean();
         fw.migrate();
     }
 
-//    public static void main(String[] args) {
-//        conn = getConn();
-//        getMigration();
-//        close();
-//    }
+    public static void main(String[] args) {
+        conn = getConn();
+        getMigration();
+        WordsDao w = WordsDao.getDao();
+        w.loadCSV();
+        close();
+    }
 }
