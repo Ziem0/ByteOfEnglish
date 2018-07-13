@@ -1,6 +1,5 @@
 package com.english.partTwo.dao;
 
-import com.english.partTwo.exceptions.InvalidIDException;
 import com.english.partTwo.models.Word;
 
 import java.io.BufferedReader;
@@ -11,12 +10,13 @@ import java.sql.*;
 import java.time.LocalDate;
 import java.time.LocalTime;
 import java.time.format.DateTimeFormatter;
+import java.util.*;
 
 public class WordsDao {
 
     private static WordsDao dao = null;
-    private static Connection conn;
-    private PreparedStatement preparedStatement;
+    private final Connection conn;
+    private PreparedStatement preparedStatement = null;
 
     private WordsDao() {
         conn = DataBaseConnection.getConn();
@@ -74,30 +74,72 @@ public class WordsDao {
     }
 
     public int getLastID() {
-        int id = Integer.parseInt(null);
+        int id = 0;
         String query = "select count(id) from words;";
         try {
-            preparedStatement = conn.prepareStatement(query);
-            ResultSet result = preparedStatement.getResultSet();
+            Statement stat = conn.createStatement();
+            stat.execute(query);
+            ResultSet result = stat.getResultSet();
             id = result.getInt(1);
+            result.close();
+            stat.close();
+            return id;
+        } catch (SQLException e) {
+            System.out.println("WordsDao.getLastID error");
+            System.out.println("lastid"+id);
+            return id;
+        }
+    }
+
+    public HashMap<Integer, List<Integer>> getAllUnknownID() {
+        return getSelectedStatusIDs("unknown");
+    }
+
+    public HashMap<Integer, List<Integer>> getAllMiddleknownID() {
+        return getSelectedStatusIDs("middleKnown");
+    }
+
+    public HashMap<Integer, List<Integer>> getAllKnownID() {
+        return getSelectedStatusIDs("known");
+    }
+
+    private HashMap<Integer, List<Integer>> getSelectedStatusIDs(String name) {
+        HashMap<Integer, List<Integer>> allID = new HashMap<>();
+        String query = "select words.id, repeated from words join status on status.id = words.statusID where status.name =? order by repeated ASC;";
+        try {
+            preparedStatement = conn.prepareStatement(query);
+            preparedStatement.setString(1, name);
+            ResultSet result = preparedStatement.executeQuery();
+            while (result.next()) {
+                int id = result.getInt(1);
+                int repeated = result.getInt(2);
+                if (!allID.containsKey(repeated)) {
+                    allID.put(repeated, new LinkedList<>());
+                }
+                allID.get(repeated).add(id);
+            }
             result.close();
             preparedStatement.close();
         } catch (SQLException e) {
-            System.out.println("WordsDao.getLastID error");
+            System.out.println("WordsDao.getSelectedStatusIDs error");
         }
-        return id;
+//        allID.entrySet().forEach(System.out::println);
+        return allID;
     }
 
-    public Word getWordByID(int id) throws InvalidIDException {
-        String query = "select words.*, status.name from words join status on status.id=words.statusID where id=?;";
+    public Word getWordByID(int id) {
+        Word w = null;
+        String query = "select words.*, status.name from words join status on status.id=words.statusID where words.id=?;";
         try {
             preparedStatement = conn.prepareStatement(query);
             preparedStatement.setInt(1, id);
-            ResultSet result = preparedStatement.getResultSet();
-            return this.createWord(result);
+            ResultSet result = preparedStatement.executeQuery();
+            w = this.createWord(result);
+            return w;
         } catch (SQLException e) {
-            throw new InvalidIDException("WordsDao.getWordByID error");
+            e.printStackTrace();
         }
+        return w;
     }
 
     private Word createWord(ResultSet result) throws SQLException {
@@ -108,9 +150,12 @@ public class WordsDao {
         String date = result.getString(5);
         LocalDate ld = LocalDate.parse(date);
         String hour = result.getString(6);
+        hour = hour.replaceAll("-", ":");
         LocalTime lh = LocalTime.parse(hour);
         int repeated = result.getInt(7);
         String status = result.getString(8);
+        result.close();
+        preparedStatement.close();
         return new Word(id, eng, pl, status, statusID, ld, lh, repeated);
     }
 
@@ -120,7 +165,7 @@ public class WordsDao {
         int statusID = word.getStatusID();
         String date = LocalDate.now().format(DateTimeFormatter.ofPattern("yyyy-MM-dd"));
         String hour = LocalTime.now().format(DateTimeFormatter.ofPattern("HH-mm-ss"));
-        int repeated = word.getRepeated() + 1;
+        int repeated = word.getRepeated();
         int id = word.getId();
         String command = "update words set eng=?, pl=?, statusID=?, date=?, hour=?, repeated=? where id=?;";
 
@@ -134,32 +179,21 @@ public class WordsDao {
             preparedStatement.setInt(6, repeated);
             preparedStatement.setInt(7, id);
             preparedStatement.executeUpdate();
+            preparedStatement.close();
         } catch (SQLException e) {
             System.out.println("WordsDao.updateWord error");
-        } finally {
-            try {
-                preparedStatement.close();
-            } catch (SQLException e) {
-                System.out.println("WordsDao.updateWord close error");
-            }
         }
     }
 
-    public void deleteWord(Word word) {
-        int id = word.getId();
+    public void deleteWord(int id) {
         String command = "delete from words where id=?;";
         try {
             preparedStatement = conn.prepareStatement(command);
             preparedStatement.setInt(1, id);
             preparedStatement.executeUpdate();
+            preparedStatement.close();
         } catch (SQLException e) {
             System.out.println("WordsDao.deleteWord error");
-        } finally {
-            try {
-                preparedStatement.close();
-            } catch (SQLException e) {
-                System.out.println("WordsDao.deleteWord close error");
-            }
         }
     }
 
@@ -176,14 +210,17 @@ public class WordsDao {
             preparedStatement.setString(3, date);
             preparedStatement.setString(4, hour);
             preparedStatement.executeUpdate();
+            preparedStatement.close();
         } catch (SQLException e) {
             System.out.println("WordsDao.addWord error");
-        } finally {
-            try {
-                preparedStatement.close();
-            } catch (SQLException e) {
-                System.out.println("WordsDao.addWord close error");
-            }
         }
+    }
+
+    public static void main(String[] args) {
+        WordsDao dao = new WordsDao();
+        dao.getAllUnknownID();
+//        Word w = new Word(2998, "zone", "strefa", "unknown", 1, LocalDate.now(), LocalTime.now(), 0);
+//        dao.updateWord(w);
+        DataBaseConnection.close();
     }
 }

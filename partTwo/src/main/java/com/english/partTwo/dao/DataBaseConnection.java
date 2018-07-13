@@ -33,7 +33,7 @@ public class DataBaseConnection {
         }
     }
 
-    private static void close() {
+    public static void close() {
         try {
             conn.close();
         } catch (SQLException e) {
@@ -41,18 +41,18 @@ public class DataBaseConnection {
         }
     }
 
-    private static void getMigration() {
+    public static void getMigration() {
         Flyway fw = new Flyway();
         fw.setDataSource(DB_URL, null, null);
-        fw.clean();
+//        fw.clean();
         fw.migrate();
     }
 
-    public static void main(String[] args) {
-        conn = getConn();
-        getMigration();
-        WordsDao w = WordsDao.getDao();
-        w.loadCSV();
-        close();
-    }
+//    public static void main(String[] args) {
+//        conn = getConn();
+//        getMigration();
+//        WordsDao w = WordsDao.getDao();
+//        w.loadCSV();
+//        close();
+//    }
 }

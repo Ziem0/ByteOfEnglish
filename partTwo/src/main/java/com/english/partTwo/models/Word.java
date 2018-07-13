@@ -78,11 +78,11 @@ public class Word {
         this.statusID--;
     }
 
-    public void updateDate(LocalDate date) {
+    public void updateDate() {
         this.date = LocalDate.now();
     }
 
-    public void updateHour(LocalTime hour) {
+    public void updateHour() {
         this.hour = LocalTime.now();
     }
 
@@ -92,6 +92,6 @@ public class Word {
 
     @Override
     public String toString() {
-        return String.format("id:%s eng:%s pl:%s status:%s date:%s repeated:%s", id, eng, pl, status, date, repeated);
+        return String.format("id:%s status:%s date:%s repeated:%s\n", id, status, date, repeated);
     }
 }
