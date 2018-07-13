@@ -90,6 +90,10 @@ public class Word {
         this.repeated++;
     }
 
+    public void setTrashStatus() {
+        this.statusID = 4;
+    }
+
     @Override
     public String toString() {
         return String.format("id:%s status:%s date:%s repeated:%s\n", id, status, date, repeated);

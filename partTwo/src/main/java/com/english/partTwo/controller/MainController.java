@@ -55,6 +55,7 @@ public class MainController {
                     startMixedStatus();
                     break;
                 case 3:
+                    startLastDaysWords();
                     break;
                 case 4:
                     break;
@@ -68,6 +69,10 @@ public class MainController {
                     runningLearnOptions = false;
             }
         }
+    }
+
+    private void startLastDaysWords() {
+        
     }
 
     private void startGeneralRandom() {
@@ -95,9 +100,19 @@ public class MainController {
         HashMap<Integer, List<Integer>> middleKnownIDs = dao.getAllMiddleknownID();
         HashMap<Integer, List<Integer>> knownIDs = dao.getAllKnownID();
 
-        runMixedStatus(userAmount, unknownIDs);
-        runMixedStatus(middleUnknownAmount, middleKnownIDs);
-        runMixedStatus(knownAmount, knownIDs);
+        if (userAmount != 0) { runMixedStatus(userAmount, unknownIDs); }
+        if (middleUnknownAmount != 0) { runMixedStatus(middleUnknownAmount, middleKnownIDs); }
+        if (knownAmount != 0) { runMixedStatus(knownAmount, knownIDs); }
+    }
+
+    private void waitingProcess(int unknown, int middleKnown, int known) {
+        System.out.println("Calculating words proportion for each status...");
+        try {
+            Thread.sleep(1000);
+        } catch (InterruptedException e) {
+            e.printStackTrace();
+        }
+        System.out.printf("Done! Proportion is following: unknown:%d middleKnown:%d known:%d\n", unknown, middleKnown, known);
     }
 
     private void runMixedStatus(int userAmount, HashMap<Integer, List<Integer>> listIDs) {
@@ -117,16 +132,6 @@ public class MainController {
         MainView.showMessage("Choose option: ");
 
         chooseTranslateOption(finalList);
-    }
-
-    private void waitingProcess(int unknown, int middleKnown, int known) {
-        System.out.println("Calculating words proportion for each status...");
-        try {
-            Thread.sleep(1000);
-        } catch (InterruptedException e) {
-            e.printStackTrace();
-        }
-        System.out.printf("Done! Proportion is following: unknown:%d middleKnown:%d known:%d", unknown, middleKnown, known);
     }
 
     private void chooseTranslateOption(List<Integer> finalList) {
@@ -181,6 +186,19 @@ public class MainController {
                 break;
             case "2":
                 w.decreaseStatus();
+                dao.updateWord(w);
+                break;
+            case "3":
+                w.setTrashStatus();
+                dao.updateWord(w);
+                break;
+            case "4":
+                System.out.printf("Change '%s' to --> ", w.getEng());
+                String newEng = MainView.getUserString();
+                w.setEng(newEng);
+                System.out.printf("Change '%s' to --> ", w.getPl());
+                String newPl = MainView.getUserString();
+                w.setPl(newPl);
                 dao.updateWord(w);
                 break;
             default:

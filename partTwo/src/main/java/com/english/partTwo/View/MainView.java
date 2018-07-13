@@ -34,8 +34,6 @@ public class MainView {
         }
     }
 
-
-
     public static void showMessage(String s) {
         System.out.println(s);
     }

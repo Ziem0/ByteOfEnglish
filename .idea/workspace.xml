@@ -2,20 +2,10 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="bcca4017-2d96-4edd-b7dd-190edb111334" name="Default" comment="">
-      <change afterPath="$PROJECT_DIR$/partTwo/src/main/java/com/english/partTwo/View/MainView.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/partTwo/src/main/java/com/english/partTwo/enums/LearnOptions.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/partTwo/src/main/java/com/english/partTwo/enums/MainMenu.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/partTwo/src/main/java/com/english/partTwo/enums/StatisticOptions.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/partTwo/src/main/java/com/english/partTwo/enums/TranslateOptions.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/partTwo/src/main/java/com/english/partTwo/enums/UpdateOptions.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/partTwo/src/main/java/com/english/partTwo/matcher/Matcher.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/partTwo/src/main/java/com/english/partTwo/App.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/partTwo/src/main/java/com/english/partTwo/View/MainView.java" beforeDir="false" afterPath="$PROJECT_DIR$/partTwo/src/main/java/com/english/partTwo/View/MainView.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/partTwo/src/main/java/com/english/partTwo/controller/MainController.java" beforeDir="false" afterPath="$PROJECT_DIR$/partTwo/src/main/java/com/english/partTwo/controller/MainController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/partTwo/src/main/java/com/english/partTwo/dao/DataBaseConnection.java" beforeDir="false" afterPath="$PROJECT_DIR$/partTwo/src/main/java/com/english/partTwo/dao/DataBaseConnection.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/partTwo/src/main/java/com/english/partTwo/dao/WordsDao.java" beforeDir="false" afterPath="$PROJECT_DIR$/partTwo/src/main/java/com/english/partTwo/dao/WordsDao.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/partTwo/src/main/java/com/english/partTwo/enums/UpdateOptions.java" beforeDir="false" afterPath="$PROJECT_DIR$/partTwo/src/main/java/com/english/partTwo/enums/UpdateOptions.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/partTwo/src/main/java/com/english/partTwo/models/Word.java" beforeDir="false" afterPath="$PROJECT_DIR$/partTwo/src/main/java/com/english/partTwo/models/Word.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/partTwo/src/main/resources/db/migration/V1.0__create_table_words.sql" beforeDir="false" afterPath="$PROJECT_DIR$/partTwo/src/main/resources/db/migration/V1.0__create_table_words.sql" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/partTwo/src/main/resources/words.db" beforeDir="false" afterPath="$PROJECT_DIR$/partTwo/src/main/resources/words.db" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/target/" />
@@ -60,8 +50,8 @@
       <file leaf-file-name="MainController.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/partTwo/src/main/java/com/english/partTwo/controller/MainController.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="105">
-              <caret line="88" column="5" lean-forward="true" selection-start-line="88" selection-start-column="5" selection-end-line="88" selection-end-column="5" />
+            <state relative-caret-position="367">
+              <caret line="74" column="8" selection-start-line="74" selection-start-column="8" selection-end-line="74" selection-end-column="8" />
               <folding>
                 <element signature="imports" expanded="true" />
                 <element signature="e#5094#5095#0" expanded="true" />
@@ -71,11 +61,14 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="UpdateOptions.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/partTwo/src/main/java/com/english/partTwo/enums/UpdateOptions.java">
+      <file leaf-file-name="WordsDao.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/partTwo/src/main/java/com/english/partTwo/dao/WordsDao.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="90">
-              <caret line="6" column="28" selection-start-line="6" selection-start-column="28" selection-end-line="6" selection-end-column="28" />
+            <state relative-caret-position="232">
+              <caret line="209" lean-forward="true" selection-start-line="209" selection-end-line="209" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -83,33 +76,11 @@
       <file leaf-file-name="Word.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/partTwo/src/main/java/com/english/partTwo/models/Word.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state>
-              <folding>
-                <element signature="imports" expanded="true" />
-                <element signature="e#1013#1014#0" expanded="true" />
-                <element signature="e#1044#1045#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="WordsDao.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/partTwo/src/main/java/com/english/partTwo/dao/WordsDao.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="135">
-              <caret line="100" lean-forward="true" selection-start-line="100" selection-end-line="100" />
+            <state relative-caret-position="202">
+              <caret line="64" column="5" lean-forward="true" selection-start-line="64" selection-start-column="5" selection-end-line="64" selection-end-column="5" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="LearnOptions.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/partTwo/src/main/java/com/english/partTwo/enums/LearnOptions.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="75">
-              <caret line="5" selection-start-line="5" selection-end-line="5" />
             </state>
           </provider>
         </entry>
@@ -117,11 +88,29 @@
       <file leaf-file-name="MainView.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/partTwo/src/main/java/com/english/partTwo/View/MainView.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="367">
-              <caret line="33" selection-start-line="33" selection-end-line="33" />
+            <state relative-caret-position="442">
+              <caret line="35" lean-forward="true" selection-start-line="35" selection-end-line="35" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="UpdateOptions.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/partTwo/src/main/java/com/english/partTwo/enums/UpdateOptions.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="120">
+              <caret line="8" column="24" selection-start-line="8" selection-start-column="24" selection-end-line="8" selection-end-column="24" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="LearnOptions.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/partTwo/src/main/java/com/english/partTwo/enums/LearnOptions.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="90">
+              <caret line="6" selection-start-line="6" selection-end-line="6" />
             </state>
           </provider>
         </entry>
@@ -159,6 +148,11 @@
       </list>
     </option>
   </component>
+  <component name="FindInProjectRecents">
+    <findStrings>
+      <find>upDATEoP</find>
+    </findStrings>
+  </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
@@ -195,11 +189,11 @@
         <option value="$PROJECT_DIR$/partTwo/src/main/java/com/english/partTwo/App.java" />
         <option value="$PROJECT_DIR$/partTwo/src/main/java/com/english/partTwo/enums/TranslateOptions.java" />
         <option value="$PROJECT_DIR$/partTwo/src/main/java/com/english/partTwo/dao/DataBaseConnection.java" />
-        <option value="$PROJECT_DIR$/partTwo/src/main/java/com/english/partTwo/models/Word.java" />
         <option value="$PROJECT_DIR$/partTwo/src/main/java/com/english/partTwo/matcher/StringMatcher.java" />
+        <option value="$PROJECT_DIR$/partTwo/src/main/java/com/english/partTwo/dao/WordsDao.java" />
+        <option value="$PROJECT_DIR$/partTwo/src/main/java/com/english/partTwo/models/Word.java" />
         <option value="$PROJECT_DIR$/partTwo/src/main/java/com/english/partTwo/View/MainView.java" />
         <option value="$PROJECT_DIR$/partTwo/src/main/java/com/english/partTwo/enums/UpdateOptions.java" />
-        <option value="$PROJECT_DIR$/partTwo/src/main/java/com/english/partTwo/dao/WordsDao.java" />
         <option value="$PROJECT_DIR$/partTwo/src/main/java/com/english/partTwo/controller/MainController.java" />
       </list>
     </option>
@@ -614,12 +608,12 @@
       <workItem from="1531397206656" duration="34541000" />
       <workItem from="1531477153057" duration="139000" />
       <workItem from="1531477321730" duration="1293000" />
-      <workItem from="1531478719769" duration="18031000" />
+      <workItem from="1531478719769" duration="20582000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="81040000" />
+    <option name="totallyTimeSpent" value="83591000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="27" width="1366" height="741" extended-state="6" />
@@ -707,8 +701,6 @@
           <caret line="94" column="36" selection-start-line="94" selection-start-column="36" selection-end-line="94" selection-end-column="36" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="e#1013#1014#0" expanded="true" />
-            <element signature="e#1044#1045#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -789,8 +781,6 @@
           <caret lean-forward="true" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="e#1013#1014#0" expanded="true" />
-            <element signature="e#1044#1045#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -983,30 +973,27 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/partTwo/src/main/java/com/english/partTwo/View/MainView.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="367">
-          <caret line="33" selection-start-line="33" selection-end-line="33" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/partTwo/src/main/java/com/english/partTwo/enums/TranslateOptions.java">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
     <entry file="file://$PROJECT_DIR$/partTwo/src/main/java/com/english/partTwo/enums/LearnOptions.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="75">
-          <caret line="5" selection-start-line="5" selection-end-line="5" />
+        <state relative-caret-position="90">
+          <caret line="6" selection-start-line="6" selection-end-line="6" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/partTwo/src/main/java/com/english/partTwo/dao/WordsDao.java">
+    <entry file="file://$PROJECT_DIR$/partTwo/src/main/java/com/english/partTwo/enums/UpdateOptions.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="135">
-          <caret line="100" lean-forward="true" selection-start-line="100" selection-end-line="100" />
+        <state relative-caret-position="120">
+          <caret line="8" column="24" selection-start-line="8" selection-start-column="24" selection-end-line="8" selection-end-column="24" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/partTwo/src/main/java/com/english/partTwo/View/MainView.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="442">
+          <caret line="35" lean-forward="true" selection-start-line="35" selection-end-line="35" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
@@ -1015,26 +1002,28 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/partTwo/src/main/java/com/english/partTwo/models/Word.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state>
+        <state relative-caret-position="202">
+          <caret line="64" column="5" lean-forward="true" selection-start-line="64" selection-start-column="5" selection-end-line="64" selection-end-column="5" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="e#1013#1014#0" expanded="true" />
-            <element signature="e#1044#1045#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/partTwo/src/main/java/com/english/partTwo/enums/UpdateOptions.java">
+    <entry file="file://$PROJECT_DIR$/partTwo/src/main/java/com/english/partTwo/dao/WordsDao.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="90">
-          <caret line="6" column="28" selection-start-line="6" selection-start-column="28" selection-end-line="6" selection-end-column="28" />
+        <state relative-caret-position="232">
+          <caret line="209" lean-forward="true" selection-start-line="209" selection-end-line="209" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/partTwo/src/main/java/com/english/partTwo/controller/MainController.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="105">
-          <caret line="88" column="5" lean-forward="true" selection-start-line="88" selection-start-column="5" selection-end-line="88" selection-end-column="5" />
+        <state relative-caret-position="367">
+          <caret line="74" column="8" selection-start-line="74" selection-start-column="8" selection-end-line="74" selection-end-column="8" />
           <folding>
             <element signature="imports" expanded="true" />
             <element signature="e#5094#5095#0" expanded="true" />
