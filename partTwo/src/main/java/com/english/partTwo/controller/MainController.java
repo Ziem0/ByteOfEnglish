@@ -6,6 +6,9 @@ import com.english.partTwo.dao.WordsDao;
 import com.english.partTwo.enums.*;
 import com.english.partTwo.models.Word;
 
+import java.time.LocalDate;
+import java.time.Period;
+import java.time.format.DateTimeFormatter;
 import java.util.*;
 import java.util.concurrent.ThreadLocalRandom;
 
@@ -58,6 +61,7 @@ public class MainController {
                     startLastDaysWords();
                     break;
                 case 4:
+                    startLastOwrds();
                     break;
                 case 5:
                     break;
@@ -71,8 +75,25 @@ public class MainController {
         }
     }
 
+    private void startLastOwrds() {
+        MainView.showMessage("Enter how many last used words you want to: ");
+        int userAmount = MainView.getUserNum(maxDaysBack);
+
+    }
+
     private void startLastDaysWords() {
-        
+        MainView.showMessage("Enter how many days you want to get back: ");
+        int maxDaysBack = Period.between(dao.getOldestDate(), LocalDate.now()).getDays();
+        int userAmount = MainView.getUserNum(maxDaysBack);
+
+        LocalDate userOldestDate = LocalDate.now().minusDays(userAmount);
+        String userOldestDateString = userOldestDate.format(DateTimeFormatter.ofPattern("yyyy-MM-dd"));
+        List<Integer> wordsIDs = dao.getWordsFromLastWords(userOldestDateString);
+
+        TranslateOptions.printMenu();
+        MainView.showMessage("Choose option: ");
+
+        chooseTranslateOption(wordsIDs);
     }
 
     private void startGeneralRandom() {

@@ -123,7 +123,6 @@ public class WordsDao {
         } catch (SQLException e) {
             System.out.println("WordsDao.getSelectedStatusIDs error");
         }
-//        allID.entrySet().forEach(System.out::println);
         return allID;
     }
 
@@ -215,6 +214,40 @@ public class WordsDao {
             System.out.println("WordsDao.addWord error");
         }
     }
+
+    public LocalDate getOldestDate() {
+        LocalDate ld = null;
+        try {
+            Statement stat = conn.createStatement();
+            ResultSet result = stat.executeQuery("select min(date) from words;");
+            String date = result.getString(1);
+            ld = LocalDate.parse(date);
+            result.close();
+            stat.close();
+        } catch (SQLException e) {
+            System.out.println("WordsDao.getOldestDate error");
+        }
+        return ld;
+    }
+
+    public List<Integer> getWordsFromLastWords(String date) {
+        List<Integer> wordsIDs = new LinkedList<>();
+        String query = "select words.id from words where words.date >= ? order by date ASC;";
+        try {
+            preparedStatement = conn.prepareStatement(query);
+            preparedStatement.setString(1, date);
+            ResultSet result = preparedStatement.executeQuery();
+            while (result.next()) {
+                wordsIDs.add(result.getInt(1));
+            }
+            result.close();
+            preparedStatement.close();
+        } catch (SQLException e) {
+            System.out.println("WordsDao.getWordsFromLastWords error");
+        }
+        return wordsIDs;
+    }
+
 
     public static void main(String[] args) {
         WordsDao dao = new WordsDao();
