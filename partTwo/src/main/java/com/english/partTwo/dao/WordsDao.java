@@ -91,11 +91,12 @@ public class WordsDao {
         }
     }
 
+//////////////
     public HashMap<Integer, List<Integer>> getAllUnknownID() {
         return getSelectedStatusIDs("unknown");
     }
 
-    public HashMap<Integer, List<Integer>> getAllMiddleknownID() {
+    public HashMap<Integer, List<Integer>> getAllMiddleKnownID() {
         return getSelectedStatusIDs("middleKnown");
     }
 
@@ -125,6 +126,7 @@ public class WordsDao {
         }
         return allID;
     }
+//////////////
 
     public Word getWordByID(int id) {
         Word w = null;
@@ -157,6 +159,7 @@ public class WordsDao {
         preparedStatement.close();
         return new Word(id, eng, pl, status, statusID, ld, lh, repeated);
     }
+    //////////////
 
     public void updateWord(Word word) {
         String eng = word.getEng();
@@ -214,6 +217,7 @@ public class WordsDao {
             System.out.println("WordsDao.addWord error");
         }
     }
+    //////////////
 
     public LocalDate getOldestDate() {
         LocalDate ld = null;
@@ -230,12 +234,50 @@ public class WordsDao {
         return ld;
     }
 
-    public List<Integer> getWordsFromLastWords(String date) {
+    public int getSelectedIdStatusAmount(String status) {
+        int amount = 0;
+        String query = "select count(words.id) from words join status on words.statusID=status.id where status.name = ?;";
+        try {
+            preparedStatement = conn.prepareStatement(query);
+            preparedStatement.setString(1, status);
+            ResultSet result = preparedStatement.executeQuery();
+            amount = result.getInt(1);
+            result.close();
+            preparedStatement.close();
+        } catch (SQLException e) {
+            System.out.println("WordsDao.getSelectedIdStatusAmount error");
+        }
+        return amount;
+    }
+
+    public List<Integer> getSelectedIdStatusList(String status) {
+        List<Integer> listIDs = new LinkedList<>();
+        String query = "select words.id from words join status on words.statusID=status.id where status.name = ?;";
+        try {
+            makePreparedToCreateList(status, listIDs, query);
+        } catch (SQLException e) {
+            System.out.println("WordsDao.getSelectedIdStatusAmount error");
+        }
+        return listIDs;
+    }
+
+    public List<Integer> getWordsFromLastDays(String date) {
         List<Integer> wordsIDs = new LinkedList<>();
         String query = "select words.id from words where words.date >= ? order by date ASC;";
         try {
+            makePreparedToCreateList(date, wordsIDs, query);
+        } catch (SQLException e) {
+            System.out.println("WordsDao.getWordsFromLastWords error");
+        }
+        return wordsIDs;
+    }
+
+    public List<Integer> getLastWords(int userAmount) {
+        List<Integer> wordsIDs = new LinkedList<>();
+        String query = "select id from words order by date desc, hour desc limit ?;";
+        try {
             preparedStatement = conn.prepareStatement(query);
-            preparedStatement.setString(1, date);
+            preparedStatement.setInt(1,userAmount);
             ResultSet result = preparedStatement.executeQuery();
             while (result.next()) {
                 wordsIDs.add(result.getInt(1));
@@ -243,15 +285,102 @@ public class WordsDao {
             result.close();
             preparedStatement.close();
         } catch (SQLException e) {
-            System.out.println("WordsDao.getWordsFromLastWords error");
+            System.out.println("WordsDao.getLastWords error");
         }
         return wordsIDs;
     }
 
+    private void makePreparedToCreateList(String status, List<Integer> listIDs, String query) throws SQLException {
+        preparedStatement = conn.prepareStatement(query);
+        preparedStatement.setString(1, status);
+        ResultSet result = preparedStatement.executeQuery();
+        while (result.next()) {
+            listIDs.add(result.getInt(1));
+        }
+        result.close();
+        preparedStatement.close();
+    }
+
+    ////////////////////////////////////////////////////////////////////
+    public List<Word> get10MostRepeated() {
+        List<Word> listRepeated = new LinkedList<>();
+        String query = "select words.*, status.name from words join status on words.statusID=status.id order by words.repeated DESC limit 10;";
+        computeListLeastOrMostRepeated(listRepeated, query);
+        return listRepeated;
+    }
+
+    private void computeListLeastOrMostRepeated(List<Word> listRepeated, String query) {
+        try {
+            Statement stat = conn.createStatement();
+            ResultSet result = stat.executeQuery(query);
+            while (result.next()) {
+                int id = result.getInt(1);
+                String eng = result.getString(2);
+                String pl = result.getString(3);
+                int statusID = result.getInt(4);
+                String date = result.getString(5);
+                LocalDate ld = LocalDate.parse(date);
+                String hour = result.getString(6);
+                hour = hour.replaceAll("-", ":");
+                LocalTime lh = LocalTime.parse(hour);
+                int repeated = result.getInt(7);
+                String status = result.getString(8);
+                listRepeated.add(new Word(id, eng, pl, status, statusID, ld, lh, repeated));
+            }
+            result.close();
+            stat.close();
+        } catch (SQLException e) {
+            System.out.println("WordsDao.get30MostRepeated error");
+        }
+    }
+
+    public List<Word> get10LeastRepeated() {
+        List<Word> listRepeated = new LinkedList<>();
+        String query = "select words.*, status.name from words join status on words.statusID=status.id order by words.repeated ASC limit 10;";
+        computeListLeastOrMostRepeated(listRepeated, query);
+        return listRepeated;
+    }
+
+
+    public boolean getEngWordsStartingWith(String letters) {
+        String query = "select words.eng, words.pl, status.name, words.date, words.hour, words.repeated from words " +
+                "join status on status.id=words.statusID where words.eng like ? || '%';";
+        return wordsStartingWithExe(letters, query);
+    }
+
+    public boolean getPlWordsStartingWith(String letters) {
+        String query = "select words.pl, words.eng, status.name, words.date, words.hour, words.repeated from words " +
+                "join status on status.id=words.statusID where words.pl like ? || '%';";
+        return wordsStartingWithExe(letters, query);
+    }
+
+    private boolean wordsStartingWithExe(String letters, String query) {
+        boolean found = false;
+        try {
+            preparedStatement = conn.prepareStatement(query);
+            preparedStatement.setString(1, letters);
+            ResultSet result = preparedStatement.executeQuery();
+            while (result.next()) {
+                found = true;
+                System.out.printf("rawLine:%-15s translated:%-15s status:%-15s date:%-10s hour:%-10s repeated:%d\n"
+                        , result.getString(1), result.getString(2), result.getString(3)
+                        , result.getString(4), result.getString(5), result.getInt(6));
+            }
+            result.close();
+            preparedStatement.close();
+        } catch (SQLException e) {
+            System.out.println("WordsDao.getWordsStartingWith error");
+        }
+        return found;
+    }
+////////////////////////////////////////////////////////////////////
+
 
     public static void main(String[] args) {
         WordsDao dao = new WordsDao();
-        dao.getAllUnknownID();
+//        dao.getEngWordsStartingWith("an");
+        dao.getPlWordsStartingWith("d");
+//        dao.getAllUnknownID();
 //        Word w = new Word(2998, "zone", "strefa", "unknown", 1, LocalDate.now(), LocalTime.now(), 0);
 //        dao.updateWord(w);
         DataBaseConnection.close();

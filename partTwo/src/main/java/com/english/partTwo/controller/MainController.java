@@ -4,6 +4,7 @@ import com.english.partTwo.View.MainView;
 import com.english.partTwo.dao.DataBaseConnection;
 import com.english.partTwo.dao.WordsDao;
 import com.english.partTwo.enums.*;
+import com.english.partTwo.exceptions.KeyListenerExe;
 import com.english.partTwo.models.Word;
 
 import java.time.LocalDate;
@@ -24,8 +25,7 @@ public class MainController {
     }
 
     private void startController() {
-        boolean runningApp = true;
-        while (runningApp) {
+        while (true) {
             MainMenu.printMenu();
             MainView.showMessage("Choose option: ");
             int userOption = MainView.getUserNum(MainMenu.values().length);
@@ -36,8 +36,11 @@ public class MainController {
                 case 2:
                     statisticController();
                     break;
-                default:
-                    runningApp = false;
+                case 3:
+                    break;
+                case 4:
+                    System.exit(1);
+                    break;
             }
         }
     }
@@ -61,24 +64,58 @@ public class MainController {
                     startLastDaysWords();
                     break;
                 case 4:
-                    startLastOwrds();
+                    startLastWords();
                     break;
                 case 5:
+                    startWordsAs("unknown");
                     break;
                 case 6:
+                    startWordsAs("middleKnown");
                     break;
                 case 7:
+                    startWordsAs("known");
                     break;
                 case 8:
                     runningLearnOptions = false;
+                    break;
             }
         }
     }
 
-    private void startLastOwrds() {
-        MainView.showMessage("Enter how many last used words you want to: ");
-        int userAmount = MainView.getUserNum(maxDaysBack);
+    private boolean startWordsAs(String status) {
+        if (dao.getSelectedIdStatusAmount(status) == 0) {
+            MainView.showMessage("There are no words with status " + status);
+            try {
+                Thread.sleep(2000);
+                MainView.showMessage("Processing.. Please wait..");
+                Thread.sleep(1000);
+            } catch (InterruptedException e) {
+                e.printStackTrace();
+            }
+            return false;
+        }
+        MainView.showMessage("Enter how many last used " + status + " words you want to: ");
+        int userAmount = MainView.getUserNum(dao.getSelectedIdStatusAmount(status));
+        List<Integer> wordsIDs = dao.getSelectedIdStatusList(status);
+        Collections.shuffle(wordsIDs);
+        wordsIDs = wordsIDs.subList(0, userAmount);
 
+        TranslateOptions.printMenu();
+        MainView.showMessage("Choose option: ");
+
+        chooseTranslateOption(wordsIDs);
+        return true;
+    }
+
+    private void startLastWords() {
+        MainView.showMessage("Enter how many last used words you want to: ");
+        int userAmount = MainView.getUserNum(dao.getLastID());
+        List<Integer> wordsIDs = dao.getLastWords(userAmount);
+
+        TranslateOptions.printMenu();
+        MainView.showMessage("Choose option: ");
+
+        chooseTranslateOption(wordsIDs);
     }
 
     private void startLastDaysWords() {
@@ -88,7 +125,7 @@ public class MainController {
 
         LocalDate userOldestDate = LocalDate.now().minusDays(userAmount);
         String userOldestDateString = userOldestDate.format(DateTimeFormatter.ofPattern("yyyy-MM-dd"));
-        List<Integer> wordsIDs = dao.getWordsFromLastWords(userOldestDateString);
+        List<Integer> wordsIDs = dao.getWordsFromLastDays(userOldestDateString);
 
         TranslateOptions.printMenu();
         MainView.showMessage("Choose option: ");
@@ -113,17 +150,23 @@ public class MainController {
     private void startMixedStatus() {
         MainView.showMessage("Enter how many words you want for 'UNKNOWN' words : ");
         int userAmount = MainView.getUserNum(dao.getLastID());
-        int middleUnknownAmount = Math.floorDiv(userAmount, 2);
-        int knownAmount = Math.floorDiv(middleUnknownAmount, 2);
-        waitingProcess(userAmount,middleUnknownAmount,knownAmount);
+        int middleKnownAmount = Math.floorDiv(userAmount, 2);
+        int knownAmount = Math.floorDiv(middleKnownAmount, 2);
+        waitingProcess(userAmount, middleKnownAmount, knownAmount);
 
         HashMap<Integer, List<Integer>> unknownIDs = dao.getAllUnknownID();
-        HashMap<Integer, List<Integer>> middleKnownIDs = dao.getAllMiddleknownID();
+        HashMap<Integer, List<Integer>> middleKnownIDs = dao.getAllMiddleKnownID();
         HashMap<Integer, List<Integer>> knownIDs = dao.getAllKnownID();
 
-        if (userAmount != 0) { runMixedStatus(userAmount, unknownIDs); }
-        if (middleUnknownAmount != 0) { runMixedStatus(middleUnknownAmount, middleKnownIDs); }
-        if (knownAmount != 0) { runMixedStatus(knownAmount, knownIDs); }
+        if (userAmount != 0) {
+            runMixedStatus(userAmount, unknownIDs);
+        }
+        if (middleKnownAmount != 0) {
+            runMixedStatus(middleKnownAmount, middleKnownIDs);
+        }
+        if (knownAmount != 0) {
+            runMixedStatus(knownAmount, knownIDs);
+        }
     }
 
     private void waitingProcess(int unknown, int middleKnown, int known) {
@@ -136,11 +179,14 @@ public class MainController {
         System.out.printf("Done! Proportion is following: unknown:%d middleKnown:%d known:%d\n", unknown, middleKnown, known);
     }
 
+    /*
+   Sorted by 'repeated' and in the end shuffle list
+     */
     private void runMixedStatus(int userAmount, HashMap<Integer, List<Integer>> listIDs) {
         List<Integer> finalList = new LinkedList<>();
         adding:
         for (int key : listIDs.keySet()) {
-            Collections.shuffle(listIDs.get(key)); ;
+            Collections.shuffle(listIDs.get(key));
             for (int value : listIDs.get(key)) {
                 finalList.add(value);
                 userAmount--;
@@ -187,33 +233,40 @@ public class MainController {
                 System.out.println(w);
                 break;
         }
-        updateWord(w);
+        try {
+            updateWord(w);
+        } catch (InterruptedException e) {
+            e.printStackTrace();
+        }
     }
 
-    private void updateWord(Word w) {
+    private void updateWord(Word w) throws InterruptedException {
         w.updateDate();
         w.updateHour();
         w.updateRepeated();
         UpdateOptions.printMenu();
-        String userChoice = MainView.getUserString();
+        String userChoice = MainView.getUserString().toUpperCase();
 
         switch (userChoice) {
             case "":
                 dao.updateWord(w);
                 break;
-            case "1":
+            case "U":
                 w.increaseStatus();
+                Thread.sleep(1000);
                 dao.updateWord(w);
                 break;
-            case "2":
+            case "D":
                 w.decreaseStatus();
+                Thread.sleep(1000);
                 dao.updateWord(w);
                 break;
-            case "3":
+            case "T":
                 w.setTrashStatus();
+                Thread.sleep(1000);
                 dao.updateWord(w);
                 break;
-            case "4":
+            case "E":
                 System.out.printf("Change '%s' to --> ", w.getEng());
                 String newEng = MainView.getUserString();
                 w.setEng(newEng);
@@ -241,12 +294,16 @@ public class MainController {
             int userOption3 = MainView.getUserNum(StatisticOptions.values().length);
             switch (userOption3) {
                 case 1:
+                    startStatusStatistic();
                     break;
                 case 2:
+                    startShowByLetter();
                     break;
                 case 3:
+                    startShowMostRepeated();
                     break;
                 case 4:
+                    startShowLeastReapeted();
                     break;
                 case 5:
                     runningStatisticOptions = false;
@@ -254,13 +311,77 @@ public class MainController {
         }
     }
 
+    private void startStatusStatistic() {
+
+    }
+
+    private void startShowLeastReapeted() {
+        dao.get10LeastRepeated().forEach(x->{
+            System.out.println(x);
+            try {
+                Thread.sleep(500);
+            } catch (InterruptedException e) {
+                e.printStackTrace();
+            }
+        });
+    }
+
+    private void startShowMostRepeated() {
+        dao.get10MostRepeated().forEach(x->{
+            System.out.println(x);
+            try {
+                Thread.sleep(500);
+            } catch (InterruptedException e) {
+                e.printStackTrace();
+            }
+        });
+
+//        KeyListenerExe exe = new KeyListenerExe(StatisticOptions.EXIT);
+//        MainView.getUserString();
+//
+//        int userChoice = StatisticOptions.getCounter() + 1;
+//        switch (userChoice) {
+//            case 1:
+//                System.out.println("jedyneczka");
+//                break;
+//            case 2:
+//                System.out.println("dwojeczka");
+//                break;
+//            case 3:
+//                System.out.println("trojeczka");
+//                break;
+//            case 4:
+//                System.out.println("czwora");
+//                break;
+//        }
+
+    }
+
+    private void startShowByLetter() {
+        TranslateOptions.printMenu();
+        int userOption4 = MainView.getUserNum(TranslateOptions.values().length);
+        switch (userOption4) {
+            case 1:
+                MainView.showMessage("Add a letter to: ..");
+                new KeyListenerExe(dao, "eng_pl");
+                MainView.getUserString();
+                break;
+            case 2:
+                MainView.showMessage("Add a letter to: ..");
+                new KeyListenerExe(dao, "pl_eng");
+                MainView.getUserString();
+                break;
+        }
+    }
+
+
     public static void main(String[] args) {
         MainController control = new MainController();
     }
 
 
-//find algorithm for random with date
-//admin options for amend data
-//enum for eng-pol
+    ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+    ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
+    //amend
 }

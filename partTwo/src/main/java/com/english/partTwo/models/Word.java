@@ -71,11 +71,21 @@ public class Word {
     }
 
     public void increaseStatus() {
-        this.statusID++;
+        if (statusID == 3) {
+            System.out.printf("Increase is not allowed. Your current status is %s\n", status);
+        } else {
+            this.statusID++;
+            System.out.printf("Done! Your current status is level up from %s\n", status);
+        }
     }
 
     public void decreaseStatus() {
-        this.statusID--;
+        if (statusID == 1) {
+            System.out.printf("Decrease is not allowed. Your current status is %s\n", status);
+        } else {
+            this.statusID--;
+            System.out.printf("Done! Your current status is level down from %s\n", status);
+        }
     }
 
     public void updateDate() {
@@ -92,10 +102,11 @@ public class Word {
 
     public void setTrashStatus() {
         this.statusID = 4;
+        System.out.printf("Done! This word has been moved to %s\n", status);
     }
 
     @Override
     public String toString() {
-        return String.format("id:%s status:%s date:%s repeated:%s\n", id, status, date, repeated);
+        return String.format("eng:%-15s pl:%-15s repeated:%-15s date:%-15s status:%-15s\n", eng, pl, repeated, date, status);
     }
 }

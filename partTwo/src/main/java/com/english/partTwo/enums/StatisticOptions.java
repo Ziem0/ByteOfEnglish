@@ -1,6 +1,6 @@
 package com.english.partTwo.enums;
 
-public enum StatisticOptions {
+public enum StatisticOptions{ //} implements IMenuPrintable{
 
     STATUS_STATISTIC("Show status statistic"),
     BY_LETTER("Show all words starting with letter(s)"),
@@ -9,9 +9,14 @@ public enum StatisticOptions {
     EXIT("Quit");
 
     private String option;
+    private static int counter;
 
     StatisticOptions(String option) {
         this.option = option;
+    }
+
+    public static int getCounter() {
+        return counter;
     }
 
     @Override
@@ -24,4 +29,31 @@ public enum StatisticOptions {
             System.out.println(option);
         }
     }
+
+//    @Override
+//    public int printMenu(String s) {
+//        if (s.equals("up")) {
+//            if (counter == 0) {
+//                counter = StatisticOptions.values().length - 1;
+//            } else {
+//                counter--;
+//            }
+//        } else if (s.equals("down")) {
+//            if (counter == StatisticOptions.values().length - 1) {
+//                counter = 0;
+//            } else {
+//                counter++;
+//            }
+//        }
+//        System.out.print("\033[H\033[2J"); System.out.flush();
+//        for (StatisticOptions option : StatisticOptions.values()) {
+//            if (option.ordinal() == counter) {
+//                System.out.println(Colors.GREEN.getBg(String.valueOf(option)));
+//            } else {
+//                System.out.println(option);
+//            }
+//        }
+//        return counter;
+//    }
+
 }

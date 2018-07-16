@@ -4,6 +4,7 @@ public enum MainMenu{
 
     LEARN_MENU,
     STATISTIC_MENU,
+    AMEND_DATA,
     EXIT_PROGRAM;
 
     MainMenu() {
