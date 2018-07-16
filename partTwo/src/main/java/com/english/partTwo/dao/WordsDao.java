@@ -302,6 +302,21 @@ public class WordsDao {
     }
 
     ////////////////////////////////////////////////////////////////////
+
+    public int getProportion(String status) {
+        int amount = 0;
+        String query = "select count(words.id) from words join status on status.id=words.statusID where status.name=?;";
+        try {
+            preparedStatement = conn.prepareStatement(query);
+            preparedStatement.setString(1, status);
+            ResultSet result = preparedStatement.executeQuery();
+            amount = result.getInt(1);
+        } catch (SQLException e) {
+            System.out.println("WordsDao.getProportion error");
+        }
+        return amount;
+    }
+
     public List<Word> get10MostRepeated() {
         List<Word> listRepeated = new LinkedList<>();
         String query = "select words.*, status.name from words join status on words.statusID=status.id order by words.repeated DESC limit 10;";

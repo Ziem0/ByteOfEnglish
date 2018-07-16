@@ -312,7 +312,7 @@ public class MainController {
     }
 
     private void startStatusStatistic() {
-
+        System.out.println(StatusStatistic.KNOWN);
     }
 
     private void startShowLeastReapeted() {
