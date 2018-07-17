@@ -39,12 +39,6 @@ public enum StatusStatistic {
         for (StatusStatistic s : StatusStatistic.values()) {
             System.out.printf("%s", s);
         }
+        System.out.println("\n");
     }
-
-
-    public static void main(String[] args) {
-        print();
-    }
-
-
 }

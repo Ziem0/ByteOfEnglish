@@ -6,7 +6,7 @@ public enum StatisticOptions{ //} implements IMenuPrintable{
     BY_LETTER("Show all words starting with letter(s)"),
     MOST_REPEATED("Show the most repeated words"),
     LEAST_REPEATED("Show the least repeated words"),
-    EXIT("Quit");
+    BACK("Back");
 
     private String option;
     private static int counter;

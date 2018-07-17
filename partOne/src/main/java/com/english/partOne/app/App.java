@@ -13,7 +13,11 @@ import java.io.IOException;
 
 public class App {
 
-    public static void main(String[] args) throws IOException {
+    public App() throws IOException {
+        start();
+    }
+
+    public void start() throws IOException {
         boolean quitProgram = false;
 
         while (!quitProgram) {

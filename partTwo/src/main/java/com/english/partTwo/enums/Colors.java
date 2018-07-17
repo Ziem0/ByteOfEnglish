@@ -26,8 +26,4 @@ public enum Colors {
     public String getBg(String s) {
         return (char) 27 + "["+this.bg+"m"+s+ (char)27 + "[0m";
     }
-
-//    public static void main(String[] args) {
-//        System.out.println(CYAN.getBg("Ziemo!"));
-//    }
 }

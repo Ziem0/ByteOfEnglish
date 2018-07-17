@@ -20,12 +20,20 @@ public class MainController {
     public MainController() {
         this.dao = WordsDao.getDao();
         DataBaseConnection.getMigration();
-//        dao.loadCSV();
+        dao.loadCSV();
+        System.out.println("Loading data...\nPlease wait...\n");
+        try {
+            Thread.sleep(2000);
+        } catch (InterruptedException e) {
+            e.printStackTrace();
+        }
+        startStatusStatistic();
         startController();
     }
 
     private void startController() {
-        while (true) {
+        boolean run = true;
+        while (run) {
             MainMenu.printMenu();
             MainView.showMessage("Choose option: ");
             int userOption = MainView.getUserNum(MainMenu.values().length);
@@ -37,14 +45,64 @@ public class MainController {
                     statisticController();
                     break;
                 case 3:
+                    amendController();
                     break;
                 case 4:
-                    System.exit(1);
+                    run = false;
                     break;
             }
         }
     }
 
+    private void amendController() {
+        boolean isRunning = true;
+
+        while (isRunning) {
+            AmendOptions.print();
+            MainView.showMessage("Choose option: ");
+            int user = MainView.getUserNum(AmendOptions.values().length);
+            switch (user) {
+                case 1:
+                    addWord();
+                    break;
+                case 2:
+                    deleteWord();
+                    break;
+                case 3:
+                    isRunning = false;
+                    break;
+            }
+        }
+    }
+
+    private void deleteWord() {
+        System.out.println("First find word's ID");
+        this.startShowByLetter();
+
+        System.out.println("Enter word's ID to delete: ");
+        int selectedID = MainView.getUserNum(dao.getLastID());   //--> add back
+        boolean isDeleted = dao.deleteWord(selectedID);
+        if (isDeleted) {
+            System.out.println("Done! Selected word has been deleted");
+        } else {
+            System.out.println("Incorrect ID!");
+        }
+    }
+
+    private void addWord() {
+        MainView.showMessage("Enter ENG sentence: ");
+        String eng = MainView.getUserString();
+        MainView.showMessage("Enter PL sentence: ");
+        String pl = MainView.getUserString();
+        boolean isDone = dao.addWord(new Word(eng, pl));
+        if (isDone) {
+            System.out.println("Done! New word has been added");
+        } else {
+            System.out.println("Incorrent input!");
+        }
+    }
+
+///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
     private void learnController() {
         boolean runningLearnOptions = true;
 
@@ -221,15 +279,15 @@ public class MainController {
         Scanner sc = new Scanner(System.in);
         switch (starterLanguage) {
             case "eng":
-                MainView.showMessage(w.getEng());
+                MainView.showMessage(Colors.MAGENTA.getBg(w.getEng()));
                 sc.nextLine();
-                MainView.showMessage(w.getPl());
+                MainView.showMessage(Colors.GREEN.getBg(w.getPl()));
                 System.out.println(w);
                 break;
             case "pl":
-                MainView.showMessage(w.getPl());
+                MainView.showMessage(Colors.MAGENTA.getBg(w.getPl()));
                 sc.nextLine();
-                MainView.showMessage(w.getEng());
+                MainView.showMessage(Colors.GREEN.getBg(w.getEng()));
                 System.out.println(w);
                 break;
         }
@@ -286,7 +344,6 @@ public class MainController {
 
     private void statisticController() {
         boolean runningStatisticOptions = true;
-
         while (runningStatisticOptions) {
             StatisticOptions.printMenu();
             MainView.showMessage("Choose option: ");
@@ -312,7 +369,7 @@ public class MainController {
     }
 
     private void startStatusStatistic() {
-        System.out.println(StatusStatistic.KNOWN);
+        StatusStatistic.print();
     }
 
     private void startShowLeastReapeted() {
@@ -374,14 +431,7 @@ public class MainController {
         }
     }
 
-
     public static void main(String[] args) {
-        MainController control = new MainController();
+        new MainController();
     }
-
-
-    ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
-    ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
-
-    //amend
 }

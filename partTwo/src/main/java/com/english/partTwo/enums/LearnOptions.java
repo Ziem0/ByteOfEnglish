@@ -9,7 +9,7 @@ public enum LearnOptions {
     UNKNOWN("<x> unknown words"),
     MIDDLE_KNOWN("<x> middle known words"),
     KNOWN("<x> known words"),
-    EXIT("Quit");
+    BACK("back");
 
     private String option;
 

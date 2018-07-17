@@ -1,5 +1,6 @@
 package com.english.partTwo.dao;
 
+import com.english.partTwo.enums.Colors;
 import com.english.partTwo.models.Word;
 
 import java.io.BufferedReader;
@@ -54,20 +55,20 @@ public class WordsDao {
             }
 
         } catch (FileNotFoundException e) {
-            System.out.println("WordsDao.loadCSV error");
+            System.out.println(Colors.RED.getFg("WordsDao.loadCSV error"));
         } catch (IOException e) {
-            System.out.println("WordsDao.loadCSV read error");
+            System.out.println(Colors.RED.getFg("WordsDao.loadCSV read error"));
         } catch (SQLException e) {
-            System.out.println("WordsDao.loadCSV preparedStat error");
+            System.out.println(Colors.RED.getFg("Database from CSV has been already loaded"));
         } finally {
             if (br == null) {
                 try {
                     br.close();
                     preparedStatement.close();
                 } catch (IOException e) {
-                    System.out.println("WordsDao.loadCSV close error");
+                    System.out.println(Colors.RED.getFg("WordsDao.loadCSV close error"));
                 } catch (SQLException e) {
-                    System.out.println("WordsDao.loadCSV preparedStat close error");
+                    System.out.println(Colors.RED.getFg("WordsDao.loadCSV preparedStat close error"));
                 }
             }
         }
@@ -75,7 +76,7 @@ public class WordsDao {
 
     public int getLastID() {
         int id = 0;
-        String query = "select count(id) from words;";
+        String query = "select id from words order by id desc limit 1;";       //count(id)
         try {
             Statement stat = conn.createStatement();
             stat.execute(query);
@@ -85,7 +86,7 @@ public class WordsDao {
             stat.close();
             return id;
         } catch (SQLException e) {
-            System.out.println("WordsDao.getLastID error");
+            System.out.println(Colors.RED.getFg("WordsDao.getLastID error"));
             System.out.println("lastid"+id);
             return id;
         }
@@ -122,7 +123,7 @@ public class WordsDao {
             result.close();
             preparedStatement.close();
         } catch (SQLException e) {
-            System.out.println("WordsDao.getSelectedStatusIDs error");
+            System.out.println(Colors.RED.getFg("WordsDao.getSelectedStatusIDs error"));
         }
         return allID;
     }
@@ -138,7 +139,7 @@ public class WordsDao {
             w = this.createWord(result);
             return w;
         } catch (SQLException e) {
-            e.printStackTrace();
+            System.out.println(Colors.RED.getFg("WordsDao.getWordByID error"));
         }
         return w;
     }
@@ -183,11 +184,11 @@ public class WordsDao {
             preparedStatement.executeUpdate();
             preparedStatement.close();
         } catch (SQLException e) {
-            System.out.println("WordsDao.updateWord error");
+            System.out.println(Colors.RED.getFg("WordsDao.updateWord error"));
         }
     }
 
-    public void deleteWord(int id) {
+    public boolean deleteWord(int id) {
         String command = "delete from words where id=?;";
         try {
             preparedStatement = conn.prepareStatement(command);
@@ -195,11 +196,13 @@ public class WordsDao {
             preparedStatement.executeUpdate();
             preparedStatement.close();
         } catch (SQLException e) {
-            System.out.println("WordsDao.deleteWord error");
+            System.out.println(Colors.RED.getFg("WordsDao.deleteWord error"));
+            return false;
         }
+        return true;
     }
 
-    public void addWord(Word word) {
+    public boolean addWord(Word word) {
         String eng = word.getEng();
         String pl = word.getPl();
         String date = LocalDate.now().format(DateTimeFormatter.ofPattern("yyyy-MM-dd"));
@@ -214,8 +217,10 @@ public class WordsDao {
             preparedStatement.executeUpdate();
             preparedStatement.close();
         } catch (SQLException e) {
-            System.out.println("WordsDao.addWord error");
+            System.out.println(Colors.RED.getFg("WordsDao.addWord error"));
+            return false;
         }
+        return true;
     }
     //////////////
 
@@ -229,7 +234,7 @@ public class WordsDao {
             result.close();
             stat.close();
         } catch (SQLException e) {
-            System.out.println("WordsDao.getOldestDate error");
+            System.out.println(Colors.RED.getFg("WordsDao.getOldestDate error"));
         }
         return ld;
     }
@@ -245,7 +250,7 @@ public class WordsDao {
             result.close();
             preparedStatement.close();
         } catch (SQLException e) {
-            System.out.println("WordsDao.getSelectedIdStatusAmount error");
+            System.out.println(Colors.RED.getFg("WordsDao.getSelectedIdStatusAmount error"));
         }
         return amount;
     }
@@ -256,7 +261,7 @@ public class WordsDao {
         try {
             makePreparedToCreateList(status, listIDs, query);
         } catch (SQLException e) {
-            System.out.println("WordsDao.getSelectedIdStatusAmount error");
+            System.out.println(Colors.RED.getFg("WordsDao.getSelectedIdStatusAmount error"));
         }
         return listIDs;
     }
@@ -267,7 +272,7 @@ public class WordsDao {
         try {
             makePreparedToCreateList(date, wordsIDs, query);
         } catch (SQLException e) {
-            System.out.println("WordsDao.getWordsFromLastWords error");
+            System.out.println(Colors.RED.getFg("WordsDao.getWordsFromLastWords error"));
         }
         return wordsIDs;
     }
@@ -285,7 +290,7 @@ public class WordsDao {
             result.close();
             preparedStatement.close();
         } catch (SQLException e) {
-            System.out.println("WordsDao.getLastWords error");
+            System.out.println(Colors.RED.getFg("WordsDao.getLastWords error"));
         }
         return wordsIDs;
     }
@@ -312,7 +317,7 @@ public class WordsDao {
             ResultSet result = preparedStatement.executeQuery();
             amount = result.getInt(1);
         } catch (SQLException e) {
-            System.out.println("WordsDao.getProportion error");
+            System.out.println(Colors.RED.getFg("WordsDao.getProportion error"));
         }
         return amount;
     }
@@ -345,7 +350,7 @@ public class WordsDao {
             result.close();
             stat.close();
         } catch (SQLException e) {
-            System.out.println("WordsDao.get30MostRepeated error");
+            System.out.println(Colors.RED.getFg("WordsDao.get30MostRepeated error"));
         }
     }
 
@@ -358,7 +363,7 @@ public class WordsDao {
 
 
     public boolean getEngWordsStartingWith(String letters) {
-        String query = "select words.eng, words.pl, status.name, words.date, words.hour, words.repeated from words " +
+        String query = "select words.id, words.eng, words.pl, status.name, words.date, words.hour, words.repeated from words " +
                 "join status on status.id=words.statusID where words.eng like ? || '%';";
         return wordsStartingWithExe(letters, query);
     }
@@ -377,27 +382,27 @@ public class WordsDao {
             ResultSet result = preparedStatement.executeQuery();
             while (result.next()) {
                 found = true;
-                System.out.printf("rawLine:%-15s translated:%-15s status:%-15s date:%-10s hour:%-10s repeated:%d\n"
-                        , result.getString(1), result.getString(2), result.getString(3)
-                        , result.getString(4), result.getString(5), result.getInt(6));
+                System.out.printf("id:%-15d rawLine:%-15s translated:%-15s status:%-15s date:%-10s hour:%-10s repeated:%d\n"
+                        , result.getInt(1), result.getString(2), result.getString(3), result.getString(4)
+                        , result.getString(5), result.getString(6), result.getInt(7));
             }
             result.close();
             preparedStatement.close();
         } catch (SQLException e) {
-            System.out.println("WordsDao.getWordsStartingWith error");
+            System.out.println(Colors.RED.getFg("WordsDao.getWordsStartingWith error"));
         }
         return found;
     }
 ////////////////////////////////////////////////////////////////////
 
 
-    public static void main(String[] args) {
-        WordsDao dao = new WordsDao();
+//    public static void main(String[] args) {
+//        WordsDao dao = new WordsDao();
 //        dao.getEngWordsStartingWith("an");
-        dao.getPlWordsStartingWith("d");
+//        dao.getPlWordsStartingWith("d");
 //        dao.getAllUnknownID();
 //        Word w = new Word(2998, "zone", "strefa", "unknown", 1, LocalDate.now(), LocalTime.now(), 0);
 //        dao.updateWord(w);
-        DataBaseConnection.close();
-    }
+//        DataBaseConnection.close();
+//    }
 }
