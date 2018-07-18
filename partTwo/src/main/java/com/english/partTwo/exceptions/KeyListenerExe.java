@@ -40,17 +40,18 @@ public class KeyListenerExe extends JFrame implements java.awt.event.KeyListener
         boolean updateBoolean = true;
         searchingWord += String.valueOf(e.getKeyChar());
 
+        System.out.println(new String(new char[50]).replace("\0", "\r\n"));
         if (translateTypeChecker.equals("eng_pl")) {
             updateBoolean = dao.getEngWordsStartingWith(searchingWord);
         } else if (translateTypeChecker.equals("pl_eng")) {
             updateBoolean = dao.getPlWordsStartingWith(searchingWord);
         }
 
-        MainView.showMessage("\nAdd a letter: " + searchingWord + "..\n");
+        MainView.showMessage("\nAdd a letter to --> " + searchingWord + "..  \nor ENTER to return");
         setVisible(updateBoolean);
 
         if (!updateBoolean) {
-            System.out.println("Searching word(s) doesn't exist.\nEnter to continue..");
+            System.out.println("\nSearching word(s) doesn't exist.\nPress ENTER to continue..");
         }
     }
 }
