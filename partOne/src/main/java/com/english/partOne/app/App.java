@@ -61,7 +61,7 @@ public class App {
                     Dao.loadGramma();
 
                 } else if ("2".equals(choice)) {
-                    Runtime.getRuntime().exec("gedit src/resources/gramma.csv");
+                    Runtime.getRuntime().exec("gedit partOne/resources/gramma.csv");
 
                 }
             }
