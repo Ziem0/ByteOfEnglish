@@ -32,8 +32,16 @@ public enum StatusStatistic {
     }
 
     public static void print() {
+        String name;
         for (StatusStatistic s : StatusStatistic.values()) {
-            System.out.printf("%-10s %d'/,\t\t\t\t\t\t\t\t\t\t", s.name(), s.getProportion()-1);
+            if (s.name().equalsIgnoreCase("UNKNOWN")) {
+                name = Colors.RED.getFg(s.name());
+            } else if (s.name().equalsIgnoreCase("MIDDLE_KNOWN")) {
+                name = Colors.CYAN.getFg(s.name());
+            } else {
+                name = Colors.GREEN.getFg(s.name());
+            }
+            System.out.printf("%-10s %d'/,\t\t\t", name, s.getProportion() - 1);
         }
         System.out.println("\n");
         for (StatusStatistic s : StatusStatistic.values()) {

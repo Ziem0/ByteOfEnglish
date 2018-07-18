@@ -1,32 +1,17 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
     <modelVersion>4.0.0</modelVersion>
-    <dependencies>
-        <dependency>
-            <groupId>com.english.partTwo</groupId>
-            <artifactId>partTwo</artifactId>
-            <version>1.0-SNAPSHOT</version>
-            <scope>compile</scope>
-        </dependency>
-        <dependency>
-            <groupId>com.english.partOne</groupId>
-            <artifactId>partOne</artifactId>
-            <version>1.0-SNAPSHOT</version>
-            <scope>compile</scope>
-        </dependency>
-    </dependencies>
+
     <parent>
-    <artifactId>xxxEnglish</artifactId>
-    <groupId>com.english.main</groupId>
-    <version>1.0-SNAPSHOT</version>
-  </parent>
+        <artifactId>xxxEnglish</artifactId>
+        <groupId>com.english.main</groupId>
+        <version>1.0-SNAPSHOT</version>
+        <relativePath>../pom.xml</relativePath>
+    </parent>
 
     <groupId>com.english.client</groupId>
     <artifactId>client</artifactId>
     <version>1.0-SNAPSHOT</version>
-
-    <name>client</name>
-    <description>Add project description here</description>
 
     <properties>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
@@ -43,6 +28,41 @@
                     <target>1.8</target>
                 </configuration>
             </plugin>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-shade-plugin</artifactId>
+                <version>3.1.1</version>
+                <configuration>
+                    <finalName>FAT</finalName>
+                    <minimizeJar>true</minimizeJar>
+                </configuration>
+                <executions>
+                    <execution>
+                        <id>FAT</id>
+                        <phase>package</phase>
+                        <goals>
+                            <goal>shade</goal>
+                        </goals>
+                    </execution>
+                </executions>
+            </plugin>
         </plugins>
     </build>
+
+    <dependencies>
+        <dependency>
+            <groupId>com.english.partTwo</groupId>
+            <artifactId>partTwo</artifactId>
+            <version>1.0-SNAPSHOT</version>
+            <!--<scope>compile</scope>-->
+            <!--<systemPath>/home/ziemo/codecool/xxxEnglish/partTwo/target/FAT.jar</systemPath>-->
+            <!--<systemPath>/home/ziemo/.m2/repository/com/english/partTwo/partTwo/1.0-SNAPSHOT/partTwo-1.0-SNAPSHOT.jar</systemPath>-->
+        </dependency>
+        <dependency>
+            <groupId>com.english.partOne</groupId>
+            <artifactId>partOne</artifactId>
+            <version>1.0-SNAPSHOT</version>
+            <!--<scope>compile</scope>-->
+        </dependency>
+    </dependencies>
 </project>

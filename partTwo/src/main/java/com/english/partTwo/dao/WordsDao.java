@@ -369,7 +369,7 @@ public class WordsDao {
     }
 
     public boolean getPlWordsStartingWith(String letters) {
-        String query = "select words.pl, words.eng, status.name, words.date, words.hour, words.repeated from words " +
+        String query = "select words.id, words.pl, words.eng, status.name, words.date, words.hour, words.repeated from words " +
                 "join status on status.id=words.statusID where words.pl like ? || '%';";
         return wordsStartingWithExe(letters, query);
     }
@@ -394,15 +394,4 @@ public class WordsDao {
         return found;
     }
 ////////////////////////////////////////////////////////////////////
-
-
-//    public static void main(String[] args) {
-//        WordsDao dao = new WordsDao();
-//        dao.getEngWordsStartingWith("an");
-//        dao.getPlWordsStartingWith("d");
-//        dao.getAllUnknownID();
-//        Word w = new Word(2998, "zone", "strefa", "unknown", 1, LocalDate.now(), LocalTime.now(), 0);
-//        dao.updateWord(w);
-//        DataBaseConnection.close();
-//    }
 }

@@ -23,7 +23,7 @@ public class MainController {
         dao.loadCSV();
         System.out.println("Loading data...\nPlease wait...\n");
         try {
-            Thread.sleep(2000);
+            Thread.sleep(500);
         } catch (InterruptedException e) {
             e.printStackTrace();
         }
@@ -34,6 +34,7 @@ public class MainController {
     private void startController() {
         boolean run = true;
         while (run) {
+            clearScreen();
             MainMenu.printMenu();
             MainView.showMessage("Choose option: ");
             int userOption = MainView.getUserNum(MainMenu.values().length);
@@ -58,6 +59,7 @@ public class MainController {
         boolean isRunning = true;
 
         while (isRunning) {
+            clearScreen();
             AmendOptions.print();
             MainView.showMessage("Choose option: ");
             int user = MainView.getUserNum(AmendOptions.values().length);
@@ -76,37 +78,55 @@ public class MainController {
     }
 
     private void deleteWord() {
+        clearScreen();
         System.out.println("First find word's ID");
+        System.out.println("Choose searching type: ");
+        try {
+            Thread.sleep(1500);
+        } catch (InterruptedException e) {
+            e.printStackTrace();
+        }
         this.startShowByLetter();
 
-        System.out.println("Enter word's ID to delete: ");
-        int selectedID = MainView.getUserNum(dao.getLastID());   //--> add back
+        System.out.println("Enter word's ID to delete or 0 to return: ");
+        int selectedID = MainView.getUserNum(dao.getLastID());
         boolean isDeleted = dao.deleteWord(selectedID);
         if (isDeleted) {
-            System.out.println("Done! Selected word has been deleted");
+            System.out.println("\nDone! Selected word has been deleted");
         } else {
-            System.out.println("Incorrect ID!");
+            System.out.println("\nIncorrect ID!");
+        }
+        try {
+            Thread.sleep(1300);
+        } catch (InterruptedException e) {
+            e.printStackTrace();
         }
     }
 
     private void addWord() {
+        clearScreen();
         MainView.showMessage("Enter ENG sentence: ");
         String eng = MainView.getUserString();
         MainView.showMessage("Enter PL sentence: ");
         String pl = MainView.getUserString();
         boolean isDone = dao.addWord(new Word(eng, pl));
         if (isDone) {
-            System.out.println("Done! New word has been added");
+            System.out.println("\nDone! New word has been added");
         } else {
-            System.out.println("Incorrent input!");
+            System.out.println("\nIncorrent input!");
+        }
+        try {
+            Thread.sleep(1300);
+        } catch (InterruptedException e) {
+            e.printStackTrace();
         }
     }
 
-///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+    ///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
     private void learnController() {
         boolean runningLearnOptions = true;
-
         while (runningLearnOptions) {
+            clearScreen();
             LearnOptions.printMenu();
             MainView.showMessage("Choose option: ");
 
@@ -235,6 +255,8 @@ public class MainController {
             e.printStackTrace();
         }
         System.out.printf("Done! Proportion is following: unknown:%d middleKnown:%d known:%d\n", unknown, middleKnown, known);
+        MainView.showMessage("\nPress ENTER to continue..");
+        MainView.getUserString();
     }
 
     /*
@@ -253,13 +275,13 @@ public class MainController {
                 }
             }
         }
-        TranslateOptions.printMenu();
-        MainView.showMessage("Choose option: ");
-
         chooseTranslateOption(finalList);
     }
 
     private void chooseTranslateOption(List<Integer> finalList) {
+        clearScreen();
+        TranslateOptions.printMenu();
+        MainView.showMessage("Choose option: ");
         int userOption4 = MainView.getUserNum(TranslateOptions.values().length);
         for (int i : finalList) {
             switch (userOption4) {
@@ -276,6 +298,7 @@ public class MainController {
     }
 
     private void display(Word w, String starterLanguage) {
+        clearScreen();
         Scanner sc = new Scanner(System.in);
         switch (starterLanguage) {
             case "eng":
@@ -345,6 +368,7 @@ public class MainController {
     private void statisticController() {
         boolean runningStatisticOptions = true;
         while (runningStatisticOptions) {
+            clearScreen();
             StatisticOptions.printMenu();
             MainView.showMessage("Choose option: ");
 
@@ -370,10 +394,12 @@ public class MainController {
 
     private void startStatusStatistic() {
         StatusStatistic.print();
+        MainView.showMessage("\nPress ENTER to continue..");
+        MainView.getUserString();
     }
 
     private void startShowLeastReapeted() {
-        dao.get10LeastRepeated().forEach(x->{
+        dao.get10LeastRepeated().forEach(x -> {
             System.out.println(x);
             try {
                 Thread.sleep(500);
@@ -381,10 +407,12 @@ public class MainController {
                 e.printStackTrace();
             }
         });
+        MainView.showMessage("\nPress ENTER to continue..");
+        MainView.getUserString();
     }
 
     private void startShowMostRepeated() {
-        dao.get10MostRepeated().forEach(x->{
+        dao.get10MostRepeated().forEach(x -> {
             System.out.println(x);
             try {
                 Thread.sleep(500);
@@ -392,31 +420,20 @@ public class MainController {
                 e.printStackTrace();
             }
         });
-
-//        KeyListenerExe exe = new KeyListenerExe(StatisticOptions.EXIT);
-//        MainView.getUserString();
-//
-//        int userChoice = StatisticOptions.getCounter() + 1;
-//        switch (userChoice) {
-//            case 1:
-//                System.out.println("jedyneczka");
-//                break;
-//            case 2:
-//                System.out.println("dwojeczka");
-//                break;
-//            case 3:
-//                System.out.println("trojeczka");
-//                break;
-//            case 4:
-//                System.out.println("czwora");
-//                break;
-//        }
-
+        MainView.showMessage("\nPress ENTER to continue..");
+        MainView.getUserString();
     }
 
     private void startShowByLetter() {
+        clearScreen();
         TranslateOptions.printMenu();
         int userOption4 = MainView.getUserNum(TranslateOptions.values().length);
+        try {
+            Thread.sleep(150);
+        } catch (InterruptedException e) {
+            e.printStackTrace();
+        }
+
         switch (userOption4) {
             case 1:
                 MainView.showMessage("Add a letter to: ..");
@@ -431,7 +448,8 @@ public class MainController {
         }
     }
 
-    public static void main(String[] args) {
-        new MainController();
+    private void clearScreen() {
+        System.out.print("\033[H\033[2J");
+        System.out.flush();
     }
 }

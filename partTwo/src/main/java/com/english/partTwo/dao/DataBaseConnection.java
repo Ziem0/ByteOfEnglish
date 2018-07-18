@@ -1,6 +1,7 @@
 package com.english.partTwo.dao;
 
 import org.flywaydb.core.Flyway;
+import org.sqlite.JDBC;
 
 import java.sql.Connection;
 import java.sql.DriverManager;
@@ -27,6 +28,7 @@ public class DataBaseConnection {
 
     private static void createConnection() {
         try {
+            DriverManager.registerDriver(new JDBC());
             conn = DriverManager.getConnection(DB_URL);
         } catch (SQLException e) {
             System.out.println("DataBaseConnection.createConnection error");

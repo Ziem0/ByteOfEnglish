@@ -2,7 +2,7 @@ package com.english.partTwo.enums;
 
 public enum UpdateOptions {
 
-    NEXT("Just ENTER"),
+    NEXT("press ENTER to continue"),
     INCREASE_STATUS("Type: '(U)pdate'"),
     DECREASE_STATUS("Type: '(D)ecrease'"),
     ADD_TO_TRASH("Type: '(T)rash'"),
