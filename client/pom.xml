@@ -54,7 +54,7 @@
             <groupId>com.english.partTwo</groupId>
             <artifactId>partTwo</artifactId>
             <version>1.0-SNAPSHOT</version>
-            <!--<scope>compile</scope>-->
+            <!--<scope>system</scope>-->
             <!--<systemPath>/home/ziemo/codecool/xxxEnglish/partTwo/target/FAT.jar</systemPath>-->
             <!--<systemPath>/home/ziemo/.m2/repository/com/english/partTwo/partTwo/1.0-SNAPSHOT/partTwo-1.0-SNAPSHOT.jar</systemPath>-->
         </dependency>
@@ -62,7 +62,6 @@
             <groupId>com.english.partOne</groupId>
             <artifactId>partOne</artifactId>
             <version>1.0-SNAPSHOT</version>
-            <!--<scope>compile</scope>-->
         </dependency>
     </dependencies>
 </project>

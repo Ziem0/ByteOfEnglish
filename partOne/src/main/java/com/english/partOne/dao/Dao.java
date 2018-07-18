@@ -7,13 +7,13 @@ import java.util.List;
 
 public class Dao implements Loader, Saver {
 
-    public static final String COMMONLY_SENTENCES = "partOne/src/main/java/com/english/partOne/resources/commonlySentences.csv";
-    public static final String COMMONLY_SENTENCES_CHECKER = "partOne/src/main/java/com/english/partOne/resources/commonlySentencesChecker.csv";
-    public static final String GRAMMA_SENTENCES = "partOne/src/main/java/com/english/partOne/resources/grammaSentences.csv";
-    public static final String GRAMMA_SENTENCES_CHECKER = "partOne/src/main/java/com/english/partOne/resources/grammaSentencesChecker.csv";
-    public static final String IT_SENTENCES = "partOne/src/main/java/com/english/partOne/resources/itSentences.csv";
-    public static final String IT_SENTENCES_CHECKER = "partOne/src/main/java/com/english/partOne/resources/itSentencesChecker.csv";
-    public static final String GRAMMA = "partOne/src/main/java/com/english/partOne/resources/gramma.csv";
+    public static final String COMMONLY_SENTENCES = "partOne/resources/commonlySentences.csv";
+    public static final String COMMONLY_SENTENCES_CHECKER = "partOne/resources/commonlySentencesChecker.csv";
+    public static final String GRAMMA_SENTENCES = "partOne/resources/grammaSentences.csv";
+    public static final String GRAMMA_SENTENCES_CHECKER = "partOne/resources/grammaSentencesChecker.csv";
+    public static final String IT_SENTENCES = "partOne/resources/itSentences.csv";
+    public static final String IT_SENTENCES_CHECKER = "partOne/resources/itSentencesChecker.csv";
+    public static final String GRAMMA = "partOne/resources/gramma.csv";
 
     private List<String> sentences;
     private List<String> booleansForSentences;
