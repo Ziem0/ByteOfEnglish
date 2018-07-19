@@ -9,12 +9,14 @@
         <outputRelativeToContentRoot value="true" />
         <module name="client" />
         <module name="partOne" />
+        <module name="partThree" />
         <module name="partTwo" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel target="8">
       <module name="client" target="1.8" />
       <module name="partOne" target="1.8" />
+      <module name="partThree" target="1.8" />
       <module name="partTwo" target="1.8" />
       <module name="xxxEnglish" target="1.8" />
     </bytecodeTargetLevel>

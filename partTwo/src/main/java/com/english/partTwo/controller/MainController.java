@@ -49,6 +49,7 @@ public class MainController {
                     amendController();
                     break;
                 case 4:
+                    DataBaseConnection.close();
                     run = false;
                     break;
             }

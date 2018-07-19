@@ -63,5 +63,11 @@
             <artifactId>partOne</artifactId>
             <version>1.0-SNAPSHOT</version>
         </dependency>
+        <dependency>
+            <groupId>com.english.partThree</groupId>
+            <artifactId>partThree</artifactId>
+            <version>1.0-SNAPSHOT</version>
+        </dependency>
     </dependencies>
+
 </project>

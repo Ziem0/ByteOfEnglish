@@ -37,6 +37,12 @@
                 <module>partTwo</module>
             </modules>
         </profile>
+        <profile>
+            <id>partThree</id>
+            <modules>
+                <module>partThree</module>
+            </modules>
+        </profile>
     </profiles>
 
     <build>
@@ -86,6 +92,7 @@
     <modules>
         <module>partTwo</module>
         <module>partOne</module>
+        <module>partThree</module>
         <module>client</module>
   </modules>
 </project>

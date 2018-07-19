@@ -4,6 +4,7 @@
     <modules>
       <module fileurl="file://$PROJECT_DIR$/client/client.iml" filepath="$PROJECT_DIR$/client/client.iml" />
       <module fileurl="file://$PROJECT_DIR$/partOne/partOne.iml" filepath="$PROJECT_DIR$/partOne/partOne.iml" />
+      <module fileurl="file://$PROJECT_DIR$/partThree/partThree.iml" filepath="$PROJECT_DIR$/partThree/partThree.iml" />
       <module fileurl="file://$PROJECT_DIR$/partTwo/partTwo.iml" filepath="$PROJECT_DIR$/partTwo/partTwo.iml" />
       <module fileurl="file://$PROJECT_DIR$/.idea/xxxEnglish.iml" filepath="$PROJECT_DIR$/.idea/xxxEnglish.iml" />
     </modules>

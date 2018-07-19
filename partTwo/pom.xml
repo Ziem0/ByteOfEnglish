@@ -80,6 +80,7 @@
     <!--</build>-->
 
     <dependencies>
+
         <!-- https://mvnrepository.com/artifact/org.flywaydb/flyway-core -->
         <dependency>
             <groupId>org.flywaydb</groupId>
