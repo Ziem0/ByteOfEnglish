@@ -9,7 +9,7 @@ import java.sql.SQLException;
 
 public class DatabaseConnection {
 
-    private static final String DB_URL = "partThree/src/main/resources/data.db";
+    private static final String DB_URL = "jdbc:sqlite:partThree/src/main/resources/data.db";
     private static Connection conn = null;
 
     private DatabaseConnection() {
@@ -46,7 +46,7 @@ public class DatabaseConnection {
     public static void migrate() {
         Flyway fw = new Flyway();
         fw.setDataSource(DB_URL, null, null);
-//        fw.clean();
+        fw.clean();
         fw.migrate();
     }
 }
