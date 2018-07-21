@@ -13,6 +13,7 @@ public abstract class AbstractModel {
     private LocalTime localTime;
     private int favorite;
 
+
     public AbstractModel(int id, String eng, String pl, int used, LocalDate localDate, LocalTime localTime, int favorite) {
         this.id = id;
         this.eng = eng;
@@ -78,4 +79,11 @@ public abstract class AbstractModel {
     public void setUsed(int used) {
         this.used++;
     }
+
+    @Override
+    public String toString() {
+        return String.format("%d %s %d %s %s %d", id, eng, used, localDate, localTime, favorite);
+    }
+
 }
+
