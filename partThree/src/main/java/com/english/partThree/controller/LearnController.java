@@ -39,7 +39,7 @@ public class LearnController {
                     startAll();
                     break;
                 case 2:
-                    startLevelLimited();          //---> unique
+                    startLevelLimited();
                     break;
                 case 3:
                     startSelectedLevel();
@@ -394,4 +394,7 @@ public class LearnController {
         createSentences(1, verbID, adjectiveID, nounID, phrasalID, idiomID);
     }
 
+    public static void main(String[] args) {
+        LearnController asd = new LearnController();
+    }
 }
