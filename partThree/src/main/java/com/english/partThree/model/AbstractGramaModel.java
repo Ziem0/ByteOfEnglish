@@ -1,5 +1,7 @@
 package com.english.partThree.model;
 
+import com.english.partThree.dao.SentenceDao;
+
 import java.time.LocalDate;
 import java.time.LocalTime;
 
@@ -39,20 +41,27 @@ public abstract class AbstractGramaModel {
         return used;
     }
 
-    public void setUsed(int used) {
+    public void setUsed() {
         this.used++;
     }
 
-    public void setLocalDate(LocalDate localDate) {
-        this.localDate = localDate;
+    public void setLocalDate() {
+        this.localDate = LocalDate.now();
     }
 
-    public void setLocalTime(LocalTime localTime) {
-        this.localTime = localTime;
+    public void setLocalTime() {
+        this.localTime = LocalTime.now();
+    }
+
+    public void upgrade(SentenceDao dao) {
+        setLocalDate();
+        setLocalTime();
+        setUsed();
+        dao.updateGrama(this);
     }
 
     @Override
     public String toString() {
-        return String.format("%d %s %d %s %s", id, name, used, localDate, localTime);
+        return String.format("%s",name);
     }
 }

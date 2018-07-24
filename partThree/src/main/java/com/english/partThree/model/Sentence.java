@@ -1,5 +1,6 @@
 package com.english.partThree.model;
 
+import com.english.partThree.dao.SentenceDao;
 import com.english.partTwo.enums.Colors;
 
 public class Sentence {
@@ -13,10 +14,10 @@ public class Sentence {
     private Adjective adjective;
     private Noun noun;
 
-    private PhrasalVerbs phrasalVerbs;
+    private Phrasal phrasal;
     private Idiom idiom;
 
-    public Sentence(Grama grama, Tense tense, Type type, Person person, Verb verb, Adjective adjective, Noun noun, PhrasalVerbs phrasalVerbs, Idiom idiom) {
+    public Sentence(Grama grama, Tense tense, Type type, Person person, Verb verb, Adjective adjective, Noun noun, Phrasal phrasal, Idiom idiom) {
         this.grama = grama;
         this.tense = tense;
         this.type = type;
@@ -24,8 +25,20 @@ public class Sentence {
         this.verb = verb;
         this.adjective = adjective;
         this.noun = noun;
-        this.phrasalVerbs = phrasalVerbs;
+        this.phrasal = phrasal;
         this.idiom = idiom;
+    }
+
+    public void upgradeAll(SentenceDao dao) {
+        grama.upgrade(dao);
+        tense.upgrade(dao);
+        type.upgrade(dao);
+//        person.setUsed();                   //--->
+        verb.upgrade(dao);
+        adjective.upgrade(dao);
+        noun.upgrade(dao);
+        phrasal.upgrade(dao);
+        idiom.upgrade(dao);
     }
 
     public Grama getGrama() {
@@ -56,8 +69,8 @@ public class Sentence {
         return noun;
     }
 
-    public PhrasalVerbs getPhrasalVerbs() {
-        return phrasalVerbs;
+    public Phrasal getPhrasal() {
+        return phrasal;
     }
 
     public Idiom getIdiom() {
@@ -65,28 +78,31 @@ public class Sentence {
     }
 
     public String printPL() {
-        return String.format("%15s%s%s\n%s%s%s%s\n%15s%s"
-                 ,Colors.CYAN.getBg(grama.getName())
-                 ,Colors.MAGENTA.getBg(tense.getName())
-                 ,Colors.CYAN.getBg(type.getName())
-                 ,Colors.GREEN.getBg(person.getPl())
-                 ,Colors.YELLOW.getBg(verb.getPl())
-                 ,Colors.GREEN.getBg(adjective.getPl())
-                 ,Colors.YELLOW.getBg(noun.getPl())
-                 ,Colors.CYAN.getBg(phrasalVerbs.getPl())
-                 ,Colors.MAGENTA.getBg(idiom.getPl()));
+        return
+        String.format("grammar--> %s %s %s\nsentence--> %s %s %s %s\nphrasalVerbs--> %s %s \nidiom--> %s %s"
+                , Colors.GREEN.getBg(type.getName())
+                , Colors.GREEN.getBg(tense.getName())
+                , Colors.GREEN.getBg(grama.getName())
+                , Colors.GREEN.getBg(person.getPl())
+                , Colors.GREEN.getBg(verb.getPl())
+                , Colors.GREEN.getBg(adjective.getPl())
+                , Colors.GREEN.getBg(noun.getPl())
+                , Colors.GREEN.getBg(phrasal.getPl())
+                , Colors.GREEN.getBg(phrasal.getExample())
+                , Colors.GREEN.getBg(idiom.getPl())
+                , Colors.GREEN.getBg(idiom.getExample()));
     }
 
     public String printENG() {
-        return String.format("%15s%s%s\n%s%s%s%s\n%15s%s"
-                ,Colors.CYAN.getBg(grama.toString())
-                ,Colors.MAGENTA.getBg(tense.toString())
-                ,Colors.CYAN.getBg(type.toString())
+        return String.format("sentence--> %s %s %s %s\nphrasalVerb--> %s %s\nidiom--> %s %s\n"
                 ,Colors.GREEN.getBg(person.toString())
-                ,Colors.YELLOW.getBg(verb.toString())
+                ,Colors.GREEN.getBg(verb.toString())
                 ,Colors.GREEN.getBg(adjective.toString())
-                ,Colors.YELLOW.getBg(noun.toString())
-                ,Colors.CYAN.getBg(phrasalVerbs.toString())
-                ,Colors.MAGENTA.getBg(idiom.toString()));
+                ,Colors.GREEN.getBg(noun.toString())
+                ,Colors.GREEN.getBg(phrasal.toString())
+                ,Colors.GREEN.getBg(phrasal.getExplain())
+                ,Colors.GREEN.getBg(idiom.toString())
+                ,Colors.GREEN.getBg(idiom.getExplain())
+        );
     }
 }

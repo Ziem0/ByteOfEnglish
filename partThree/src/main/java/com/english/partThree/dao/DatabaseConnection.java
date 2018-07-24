@@ -46,7 +46,7 @@ public class DatabaseConnection {
     public static void migrate() {
         Flyway fw = new Flyway();
         fw.setDataSource(DB_URL, null, null);
-        fw.clean();
+//        fw.clean();
         fw.migrate();
     }
 }

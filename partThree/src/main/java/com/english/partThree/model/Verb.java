@@ -32,6 +32,6 @@ public class Verb extends AbstractModel {
 
     @Override
     public String toString() {
-        return String.format("%d %s %s %s %d %s %s %d", getId(), getEng(), simple, perfect, getUsed(), getLocalDate(), getLocalTime(), getFavorite());
+        return String.format("%s %s %s ", getEng(), simple, perfect);
     }
 }

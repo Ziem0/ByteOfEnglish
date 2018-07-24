@@ -30,12 +30,12 @@ public class Person {
         return used;
     }
 
-    public void setUsed(int used) {
+    public void setUsed() {
         this.used++;
     }
 
     @Override
     public String toString() {
-        return String.format("%d %s %d", id, eng, used);
+        return String.format("%s ", eng);
     }
 }

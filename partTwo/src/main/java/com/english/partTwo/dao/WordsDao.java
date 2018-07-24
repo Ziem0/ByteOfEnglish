@@ -76,7 +76,7 @@ public class WordsDao {
 
     public int getLastID() {
         int id = 0;
-        String query = "select id from words order by id desc limit 1;";       //count(id)
+        String query = "select id from words order by id desc limit 1;";
         try {
             Statement stat = conn.createStatement();
             stat.execute(query);

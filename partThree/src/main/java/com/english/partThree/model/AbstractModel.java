@@ -1,5 +1,8 @@
 package com.english.partThree.model;
 
+import com.english.partThree.dao.SentenceDao;
+import com.english.partTwo.View.MainView;
+
 import java.time.LocalDate;
 import java.time.LocalTime;
 
@@ -52,23 +55,23 @@ public abstract class AbstractModel {
         return favorite;
     }
 
-    public void setEng(String eng) {
-        this.eng = eng;
+    public void setEng(String engU) {
+        this.eng = engU;
     }
 
-    public void setPl(String pl) {
-        this.pl = pl;
+    public void setPl(String plU) {
+        this.pl = plU;
     }
 
-    public void setLocalDate(LocalDate localDate) {
-        this.localDate = localDate;
+    public void setLocalDate() {
+        this.localDate = LocalDate.now();
     }
 
-    public void setLocalTime(LocalTime localTime) {
-        this.localTime = localTime;
+    public void setLocalTime() {
+        this.localTime = LocalTime.now();
     }
 
-    public void setFavorite(int favorite) {
+    public void setFavorite() {
         if (favorite == 0) {
             favorite++;
         } else if (favorite == 1) {
@@ -76,13 +79,30 @@ public abstract class AbstractModel {
         }
     }
 
-    public void setUsed(int used) {
+    public void setUsed() {
         this.used++;
+    }
+
+    public void upgrade(SentenceDao dao) {
+        setLocalDate();
+        setLocalTime();
+        setUsed();
+        dao.updateWord(this);
+    }
+
+    public void modify() {
+        System.out.printf("change '%s' on --> ", eng);
+        String userENG = MainView.getUserString();
+        setEng(userENG);
+
+        System.out.printf("change '%s' on --> ", pl);
+        String userPL = MainView.getUserString();
+        setPl(userPL);
     }
 
     @Override
     public String toString() {
-        return String.format("%d %s %d %s %s %d", id, eng, used, localDate, localTime, favorite);
+        return String.format("%s", eng);
     }
 
 }

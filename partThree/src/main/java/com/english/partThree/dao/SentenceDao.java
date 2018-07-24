@@ -1,6 +1,8 @@
 package com.english.partThree.dao;
 
 import com.english.partThree.enums.CsvPath;
+import com.english.partThree.enums.EditablePart;
+import com.english.partThree.interfaces.ExAble;
 import com.english.partThree.model.*;
 
 import java.io.BufferedReader;
@@ -13,6 +15,8 @@ import java.sql.SQLException;
 import java.time.LocalDate;
 import java.time.LocalTime;
 import java.time.format.DateTimeFormatter;
+import java.util.LinkedList;
+import java.util.List;
 
 public class SentenceDao {
 
@@ -99,7 +103,7 @@ public class SentenceDao {
     ///////////////////////////////////////////////////////////////////////
 
     public void updateWord(AbstractModel model) {
-        String query = "update " + model.getClass().getSimpleName() + " set eng=?, pl=?, used=?, date=?, hour=?, favorite=? where id=?;";
+        String query = "update " + model.getClass().getSimpleName().toLowerCase() + " set eng=?, pl=?, used=?, date=?, hour=?, favorite=? where id=?;";
 
         int id = model.getId();
         String eng = model.getEng();
@@ -123,6 +127,26 @@ public class SentenceDao {
         } catch (SQLException e) {
             e.printStackTrace();
         }
+    }
+
+    public <E extends ExAble> void updateExplainAndExample(E model, int id) {
+        String partName = model.getClass().getSimpleName();
+        String query = "update " + partName + " set explain=?, example=? where id=?;";
+
+        String example = model.getExample();
+        String explain = model.getExplain();
+
+        try {
+            setPreparedStatement(query);
+            preparedStatement.setString(1, explain);
+            preparedStatement.setString(2, example);
+            preparedStatement.setInt(3, id);
+            preparedStatement.executeUpdate();
+            closePrepareStatement();
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
+
     }
 
     public void updateGrama(AbstractGramaModel grama) {
@@ -193,8 +217,8 @@ public class SentenceDao {
             int usedU = r.getInt(4);
             String localDateU = r.getString(5);
             LocalDate ld = LocalDate.parse(localDateU);
-            String localTimeU = r.getString(6);
-            LocalTime lt = LocalTime.parse(localTimeU);
+            String[] localTimeU = r.getString(6).split("-");
+            LocalTime lt = LocalTime.of(Integer.parseInt(localTimeU[0]),Integer.parseInt(localTimeU[1]),Integer.parseInt(localTimeU[2]));
             int favoriteU = r.getInt(7);
 
             switch (modelType) {
@@ -214,10 +238,10 @@ public class SentenceDao {
                     String perfectU = r.getString(9);
                     word = new Verb(idU, engU, plU, usedU, ld, lt, favoriteU, simpleU, perfectU);
                     break;
-                case "phrasalVerb":
+                case "phrasal":
                     String explain = r.getString(8);
                     String example = r.getString(9);
-                    word = new PhrasalVerbs(idU, engU, plU, usedU, ld, lt, favoriteU, explain, example);
+                    word = new Phrasal(idU, engU, plU, usedU, ld, lt, favoriteU, explain, example);
                     break;
                 default:
                     System.out.println("Incorrect wordType");
@@ -237,8 +261,8 @@ public class SentenceDao {
             int usedU = r.getInt(3);
             String localDateU = r.getString(4);
             LocalDate ld = LocalDate.parse(localDateU);
-            String localTimeU = r.getString(5);
-            LocalTime lt = LocalTime.parse(localTimeU);
+            String[] localTimeU = r.getString(5).split("-");
+            LocalTime lt = LocalTime.of(Integer.parseInt(localTimeU[0]),Integer.parseInt(localTimeU[1]),Integer.parseInt(localTimeU[2]));
 
             switch (modelType) {
                 case "grama":
@@ -260,6 +284,23 @@ public class SentenceDao {
         return grama;
     }
 
+    public Person createPersonByID(int id) {
+        String query = "select * from person where id=?;";
+        setPreparedStatement(query);
+        try {
+            preparedStatement.setInt(1, id);
+            ResultSet r = preparedStatement.executeQuery();
+            if (r.next()) {
+                int id_ = r.getInt(1);
+                String eng = r.getString(2);
+                String pl = r.getString(3);
+                int used = r.getInt(4);
+                return new Person(id, eng, pl, used);
+            }
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
+        return null;    }
     ////////////////////////////////////////////////////////////////////////
 
     public int getMaxId(String option) {
@@ -310,43 +351,74 @@ public class SentenceDao {
 
     ////////////////////////////////////////////////////////////////////////
 
+    public List<Integer> getMostLeastRepeated(String LeastOrMost,int amount, String model) {
+        List<Integer> ids = new LinkedList<>();
 
+        String query = "";
+        if (LeastOrMost.equals("most")) {
+            query = "select id from " + model + " order by used DESC limit ?;";
+        } else {
+            query = "select id from " + model + " order by used ASC limit ?;";
+        }
 
-//    public int getMaxIdLimitedByLevel(enum) {
-//    }
-//
-//    public int getIdFromLevel(enum) {
-//    }
-
-
-
-// amount each model
-    //x sentences with all for each                             -----> return max index                                 ----> outside random
-    //x sentences with chosen level for each (level is limit)   -----> return max idx referenced to selected levels     ----> outside random
-    //x sentences with only chosen level for each               -----> return min max idx referenced to selected level  ----> outside random
-    //
-    //x sentences with most repeated for each                   -----> return x index       --> sorted by sql
-    //x sentences with last repeated for each                   -----> return all index     --> sorted by sql
-    //x sentences sorted by date for each                       -----> return all index     --> sorted by sql
-    //
-    //x sentences from favorite                                 -----> return x index       --> outside random
-
-
-    //add to favorite --> choose what
-
-    //statistic: sum repeated for each
-
-    //edit --> choose what
-
-//    sqlite> select count(id) from verb;       1000 : 20 = 50            dao.sum  (levels manual) foo(calculate min max for level 50*(level-1) --> (50*level))
-//    sqlite> select count(id) from noun;       1525 : 30 = 50,8
-//    sqlite> select count(id) from adjective;  143  : 4  = 35,75
-//    sqlite> select count(id) from idiom;      300  : 10 = 30
-//    sqlite> select count(id) from phrasal;    95   : 5  = 19
-
-    public static void main(String[] args) {
-        SentenceDao dao = getDao();
-        DatabaseConnection.migrate();
-        dao.loadAllCsv();
+        createListWithIds(amount, ids, query);
+        return ids;
     }
+
+    public List<Integer> getByDate(String newOrOld,int amount, String model) {
+        List<Integer> ids = new LinkedList<>();
+
+        String query = "";
+        if (newOrOld.equals("new")) {
+            query = "select id from " + model + " order by date, hour DESC limit ?;";
+        } else {
+            query = "select id from " + model + " order by date, hour ASC limit ?;";
+        }
+
+        createListWithIds(amount, ids, query);
+        return ids;
+    }
+
+    private void createListWithIds(int amount, List<Integer> ids, String query) {
+        try {
+            setPreparedStatement(query);
+            preparedStatement.setInt(1, amount);
+            ResultSet r = preparedStatement.executeQuery();
+            while (r.next()) {
+                ids.add(r.getInt(1));
+            }
+            r.close();
+            closePrepareStatement();
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
+    }
+
+    public List<Integer> getByFavorite(String model) {
+        List<Integer> ids = new LinkedList<>();
+
+        String query = "select id from " + model + " where favorite is 1 limit ?;";
+
+        createListWithIds(3000, ids, query);
+        return ids;
+    }
+
+    public boolean isFavoritePossible() {
+        for (EditablePart model : EditablePart.values()) {
+            String query = "select count(id) from " + model + " where favorite is 1;";
+            try {
+                setPreparedStatement(query);
+                ResultSet r = preparedStatement.executeQuery();
+                if (r.getInt(1) == 0) {
+                    r.close();
+                    closePrepareStatement();
+                    return false;
+                }
+            } catch (SQLException e) {
+                e.printStackTrace();
+            }
+        }
+        return true;
+    }
+
 }

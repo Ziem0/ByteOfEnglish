@@ -2,47 +2,31 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="bcca4017-2d96-4edd-b7dd-190edb111334" name="Default" comment="k">
-      <change afterPath="$PROJECT_DIR$/partThree/src/main/java/com/english/partThree/enums/PartOptions.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/partThree/src/main/java/com/english/partThree/view/View.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/partThree/src/main/java/com/english/partThree/enums/EditablePart.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/partThree/src/main/java/com/english/partThree/enums/LearnOptions.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/partThree/src/main/java/com/english/partThree/enums/SubMenuOptions.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/partThree/src/main/java/com/english/partThree/exception/EmptyListException.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/partThree/src/main/java/com/english/partThree/interfaces/ExAble.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/partOne/resources/commonlySentencesChecker.csv" beforeDir="false" afterPath="$PROJECT_DIR$/partOne/resources/commonlySentencesChecker.csv" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/partOne/resources/grammaSentencesChecker.csv" beforeDir="false" afterPath="$PROJECT_DIR$/partOne/resources/grammaSentencesChecker.csv" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/partOne/resources/itSentencesChecker.csv" beforeDir="false" afterPath="$PROJECT_DIR$/partOne/resources/itSentencesChecker.csv" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/partThree/partThree.iml" beforeDir="false" afterPath="$PROJECT_DIR$/partThree/partThree.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/partThree/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/partThree/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/src/main/java/com/english/client/App.java" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/main/java/com/english/client/App.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/src/main/java/com/english/client/enums/Menu.java" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/main/java/com/english/client/enums/Menu.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/partThree/src/main/java/com/english/partThree/controller/AmendController.java" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/partThree/src/main/java/com/english/partThree/controller/LearnController.java" beforeDir="false" afterPath="$PROJECT_DIR$/partThree/src/main/java/com/english/partThree/controller/LearnController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/partThree/src/main/java/com/english/partThree/controller/MainController.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/partThree/src/main/java/com/english/partThree/controller/StatisticController.java" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/partThree/src/main/java/com/english/partThree/dao/DatabaseConnection.java" beforeDir="false" afterPath="$PROJECT_DIR$/partThree/src/main/java/com/english/partThree/dao/DatabaseConnection.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/partThree/src/main/java/com/english/partThree/dao/SentenceDao.java" beforeDir="false" afterPath="$PROJECT_DIR$/partThree/src/main/java/com/english/partThree/dao/SentenceDao.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/partThree/src/main/java/com/english/partThree/enums/CsvPath.java" beforeDir="false" afterPath="$PROJECT_DIR$/partThree/src/main/java/com/english/partThree/enums/CsvPath.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/partThree/src/main/java/com/english/partThree/enums/PartOptions.java" beforeDir="false" afterPath="$PROJECT_DIR$/partThree/src/main/java/com/english/partThree/enums/PartOptions.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/partThree/src/main/java/com/english/partThree/model/AbstractGramaModel.java" beforeDir="false" afterPath="$PROJECT_DIR$/partThree/src/main/java/com/english/partThree/model/AbstractGramaModel.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/partThree/src/main/java/com/english/partThree/model/AbstractModel.java" beforeDir="false" afterPath="$PROJECT_DIR$/partThree/src/main/java/com/english/partThree/model/AbstractModel.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/partThree/src/main/java/com/english/partThree/model/Adjective.java" beforeDir="false" afterPath="$PROJECT_DIR$/partThree/src/main/java/com/english/partThree/model/Adjective.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/partThree/src/main/java/com/english/partThree/model/Grama.java" beforeDir="false" afterPath="$PROJECT_DIR$/partThree/src/main/java/com/english/partThree/model/Grama.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/partThree/src/main/java/com/english/partThree/model/Idiom.java" beforeDir="false" afterPath="$PROJECT_DIR$/partThree/src/main/java/com/english/partThree/model/Idiom.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/partThree/src/main/java/com/english/partThree/model/Noun.java" beforeDir="false" afterPath="$PROJECT_DIR$/partThree/src/main/java/com/english/partThree/model/Noun.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/partThree/src/main/java/com/english/partThree/model/Person.java" beforeDir="false" afterPath="$PROJECT_DIR$/partThree/src/main/java/com/english/partThree/model/Person.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/partThree/src/main/java/com/english/partThree/model/PhrasalVerbs.java" beforeDir="false" afterPath="$PROJECT_DIR$/partThree/src/main/java/com/english/partThree/model/PhrasalVerbs.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/partThree/src/main/java/com/english/partThree/model/PhrasalVerbs.java" beforeDir="false" afterPath="$PROJECT_DIR$/partThree/src/main/java/com/english/partThree/model/Phrasal.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/partThree/src/main/java/com/english/partThree/model/Sentence.java" beforeDir="false" afterPath="$PROJECT_DIR$/partThree/src/main/java/com/english/partThree/model/Sentence.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/partThree/src/main/java/com/english/partThree/model/Tense.java" beforeDir="false" afterPath="$PROJECT_DIR$/partThree/src/main/java/com/english/partThree/model/Tense.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/partThree/src/main/java/com/english/partThree/model/Type.java" beforeDir="false" afterPath="$PROJECT_DIR$/partThree/src/main/java/com/english/partThree/model/Type.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/partThree/src/main/java/com/english/partThree/model/Verb.java" beforeDir="false" afterPath="$PROJECT_DIR$/partThree/src/main/java/com/english/partThree/model/Verb.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/partThree/src/main/java/com/english/partThree/view/View.java" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/partThree/src/main/resources/data.db" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/partThree/src/main/resources/db/migration/V1.0__create_tense.sql" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/partThree/src/main/resources/db/migration/V1.1__create_person.sql" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/partThree/src/main/resources/db/migration/V1.2__create_verb.sql" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/partThree/src/main/resources/db/migration/V1.3__create_noun.sql" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/partThree/src/main/resources/db/migration/V1.4__create_adjective.sql" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/partThree/src/main/resources/db/migration/V1.5__create_idiom.sql" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/partThree/src/main/resources/db/migration/V1.6__create_phrasal_verb.sql" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/partThree/src/main/resources/db/migration/V1.7__create_addon.sql" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/partThree/src/main/resources/db/migration/V1.8__create_type.sql" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/partThree/src/main/resources/db/migration/V1.9__create_grama.sql" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/partThree/src/main/resources/db/migration/V2.0__insert_tenses.sql" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/partThree/src/main/resources/db/migration/V2.1__insert_person.sql" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/partThree/src/main/resources/db/migration/V2.2__insert_type.sql" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/partThree/src/main/resources/db/migration/V2.3__insert_grama.sql" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/partThree/src/main/resources/verbs.csv" beforeDir="false" afterPath="$PROJECT_DIR$/partThree/src/main/resources/verbs.csv" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/partTwo/src/main/resources/data.csv" beforeDir="false" afterPath="$PROJECT_DIR$/partTwo/src/main/resources/data.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/partTwo/src/main/java/com/english/partTwo/dao/WordsDao.java" beforeDir="false" afterPath="$PROJECT_DIR$/partTwo/src/main/java/com/english/partTwo/dao/WordsDao.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/partTwo/src/main/resources/words.db" beforeDir="false" afterPath="$PROJECT_DIR$/partTwo/src/main/resources/words.db" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/target/" />
@@ -76,26 +60,39 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="CsvPath.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/partThree/src/main/java/com/english/partThree/enums/CsvPath.java">
+      <file leaf-file-name="LearnController.java" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/partThree/src/main/java/com/english/partThree/controller/LearnController.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="135">
-              <caret line="9" selection-start-line="9" selection-end-line="9" />
+            <state>
+              <folding>
+                <element signature="imports" expanded="true" />
+                <element signature="method#startController#0;class#LearnController#0" />
+                <element signature="method#getRandomInt#0;class#LearnController#0" />
+                <element signature="method#getRandomIntForLevel#0;class#LearnController#0" />
+                <element signature="method#sleep#0;class#LearnController#0" />
+                <element signature="method#cleaner#0;class#LearnController#0" />
+                <element signature="method#display#0;class#LearnController#0" />
+                <element signature="method#handleSubMenu#0;class#LearnController#0" />
+                <element signature="method#editHandle#0;class#LearnController#0" />
+                <element signature="method#favoriteHandle#0;class#LearnController#0" />
+                <element signature="method#chooseLevelForEachPart#0;class#LearnController#0" />
+                <element signature="method#startAll#0;class#LearnController#0" />
+                <element signature="method#startLevelLimited#0;class#LearnController#0" />
+                <element signature="method#startSelectedLevel#0;class#LearnController#0" />
+                <element signature="method#startMostLeastRepeated#0;class#LearnController#0" />
+                <element signature="method#startByDatetime#0;class#LearnController#0" />
+                <element signature="method#createSentences#0;class#LearnController#0" />
+                <element signature="method#startFavorite#0;class#LearnController#0" />
+              </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="PartOptions.java" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/partThree/src/main/java/com/english/partThree/enums/PartOptions.java">
+      <file leaf-file-name="DatabaseConnection.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/partThree/src/main/java/com/english/partThree/dao/DatabaseConnection.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="486">
-              <caret line="62" column="5" lean-forward="true" selection-start-line="62" selection-start-column="5" selection-end-line="62" selection-end-column="5" />
-              <folding>
-                <element signature="imports" expanded="true" />
-                <element signature="method#calculateMinMaxLevel#0;class#PartOptions#0" />
-                <element signature="e#1530#1531#0" expanded="true" />
-                <element signature="e#1596#1597#0" expanded="true" />
-              </folding>
+            <state relative-caret-position="15">
+              <caret line="1" selection-start-line="1" selection-end-line="1" />
             </state>
           </provider>
         </entry>
@@ -103,52 +100,29 @@
       <file leaf-file-name="SentenceDao.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/partThree/src/main/java/com/english/partThree/dao/SentenceDao.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="171">
-              <caret line="323" column="4" selection-start-line="323" selection-start-column="4" selection-end-line="323" selection-end-column="4" />
+            <state>
               <folding>
-                <element signature="imports" expanded="true" />
-                <element signature="e#976#1191#0" />
-                <element signature="e#1197#1373#0" />
-                <element signature="e#1379#1696#0" />
-                <element signature="e#1702#2194#0" />
-                <element signature="e#2200#2773#0" />
-                <element signature="e#2855#3973#0" />
-                <element signature="e#3979#4814#0" />
-                <element signature="e#4897#5446#0" />
-                <element signature="e#5452#6010#0" />
-                <element signature="e#6016#7881#0" />
-                <element signature="e#7887#8974#0" />
-                <element signature="e#9058#10479#0" />
+                <element signature="e#712#970#0" />
+                <element signature="e#1053#1268#0" />
+                <element signature="e#1274#1450#0" />
+                <element signature="e#2277#2850#0" />
+                <element signature="e#2932#4050#0" />
+                <element signature="e#4056#4162#0" />
+                <element signature="e#4056#4891#0" />
+                <element signature="e#4974#5523#0" />
+                <element signature="e#5529#6085#0" />
+                <element signature="e#6091#8042#0" />
+                <element signature="e#8048#9228#0" />
+                <element signature="e#9234#9857#0" />
+                <element signature="e#9940#11361#0" />
+                <element signature="e#12252#12864#0" />
+                <element signature="e#13062#13836#0" />
+                <element signature="e#13190#13658#0" />
+                <element signature="method#getByFavorite#0;class#SentenceDao#0" />
+                <element signature="method#isFavoritePossible#0;class#SentenceDao#0" />
               </folding>
             </state>
           </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="LearnController.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/partThree/src/main/java/com/english/partThree/controller/LearnController.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="180">
-              <caret line="12" selection-start-line="12" selection-end-line="12" />
-              <folding>
-                <element signature="e#196#197#0" expanded="true" />
-                <element signature="e#226#227#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="View.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/partThree/src/main/java/com/english/partThree/view/View.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="135">
-              <caret line="9" column="30" selection-start-line="9" selection-start-column="30" selection-end-line="9" selection-end-column="30" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Sentence.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/partThree/src/main/java/com/english/partThree/model/Sentence.java">
-          <provider selected="true" editor-type-id="text-editor" />
         </entry>
       </file>
     </leaf>
@@ -157,8 +131,8 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="Kotlin Interface" />
-        <option value="Interface" />
         <option value="Enum" />
+        <option value="Interface" />
         <option value="Class" />
       </list>
     </option>
@@ -173,6 +147,9 @@
       <find>display</find>
       <find>eader</find>
       <find>Math</find>
+      <find>phrasalVerb</find>
+      <find>ph</find>
+      <find>import</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -181,26 +158,16 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/partTwo/src/main/java/com/english/partTwo/exceptions/KeyListener.java" />
-        <option value="$PROJECT_DIR$/partTwo/src/main/java/com/english/partTwo/enums/IMenuPrintable.java" />
-        <option value="$PROJECT_DIR$/partTwo/src/main/java/com/english/partTwo/models/Demo.java" />
-        <option value="$PROJECT_DIR$/partTwo/src/main/java/com/english/partTwo/enums/StatusOptions.java" />
-        <option value="$PROJECT_DIR$/partTwo/src/main/java/com/english/partTwo/enums/CalcuteProportion.java" />
-        <option value="$PROJECT_DIR$/partTwo/src/main/java/com/english/partTwo/enums/Colors.java" />
-        <option value="$PROJECT_DIR$/partTwo/src/main/java/com/english/partTwo/enums/AmendOptions.java" />
         <option value="$PROJECT_DIR$/partTwo/src/main/java/com/english/partTwo/enums/LearnOptions.java" />
         <option value="$PROJECT_DIR$/partTwo/src/main/java/com/english/partTwo/enums/StatisticOptions.java" />
-        <option value="$PROJECT_DIR$/client/src/main/java/com/english/client/enums/Menu.java" />
         <option value="$PROJECT_DIR$/partOne/src/main/java/com/english/partOne/app/App.java" />
         <option value="$PROJECT_DIR$/partTwo/src/main/java/com/english/partTwo/models/Word.java" />
         <option value="$PROJECT_DIR$/partTwo/src/main/java/com/english/partTwo/View/MainView.java" />
         <option value="$PROJECT_DIR$/partOne/pom.xml" />
         <option value="$PROJECT_DIR$/partTwo/src/main/java/com/english/partTwo/dao/DataBaseConnection.java" />
-        <option value="$PROJECT_DIR$/partTwo/src/main/java/com/english/partTwo/dao/WordsDao.java" />
         <option value="$PROJECT_DIR$/partTwo/src/main/java/com/english/partTwo/enums/StatusStatistic.java" />
         <option value="$PROJECT_DIR$/partTwo/src/main/java/com/english/partTwo/enums/UpdateOptions.java" />
         <option value="$PROJECT_DIR$/partTwo/src/main/java/com/english/partTwo/enums/MainMenu.java" />
-        <option value="$PROJECT_DIR$/client/src/main/java/com/english/client/App.java" />
         <option value="$PROJECT_DIR$/partTwo/src/main/java/com/english/partTwo/exceptions/KeyListenerExe.java" />
         <option value="$PROJECT_DIR$/partOne/src/main/java/com/english/partOne/dao/Dao.java" />
         <option value="$PROJECT_DIR$/partThree/pom.xml" />
@@ -219,18 +186,28 @@
         <option value="$PROJECT_DIR$/partThree/src/main/java/com/english/partThree/model/Type.java" />
         <option value="$PROJECT_DIR$/partThree/src/main/java/com/english/partThree/interfaces/VerbModable.java" />
         <option value="$PROJECT_DIR$/partThree/src/main/java/com/english/partThree/model/Noun.java" />
-        <option value="$PROJECT_DIR$/partThree/src/main/java/com/english/partThree/model/AbstractGramaModel.java" />
-        <option value="$PROJECT_DIR$/partThree/src/main/java/com/english/partThree/model/AbstractModel.java" />
+        <option value="$PROJECT_DIR$/partThree/src/main/java/com/english/partThree/enums/CsvPath.java" />
+        <option value="$PROJECT_DIR$/partThree/src/main/java/com/english/partThree/view/View.java" />
+        <option value="$PROJECT_DIR$/partThree/src/main/java/com/english/partThree/enums/SubMenuOptionss.java" />
         <option value="$PROJECT_DIR$/partThree/src/main/java/com/english/partThree/model/Person.java" />
-        <option value="$PROJECT_DIR$/partThree/src/main/java/com/english/partThree/model/Sentence.java" />
+        <option value="$PROJECT_DIR$/partThree/src/main/java/com/english/partThree/model/AbstractGramaModel.java" />
         <option value="$PROJECT_DIR$/partThree/src/main/java/com/english/partThree/model/Verb.java" />
         <option value="$PROJECT_DIR$/partThree/src/main/java/com/english/partThree/model/PhrasalVerbs.java" />
+        <option value="$PROJECT_DIR$/partThree/src/main/java/com/english/partThree/interfaces/ExAble.java" />
         <option value="$PROJECT_DIR$/partThree/src/main/java/com/english/partThree/model/Idiom.java" />
-        <option value="$PROJECT_DIR$/partThree/src/main/java/com/english/partThree/enums/CsvPath.java" />
-        <option value="$PROJECT_DIR$/partThree/src/main/java/com/english/partThree/dao/DatabaseConnection.java" />
-        <option value="$PROJECT_DIR$/partThree/src/main/java/com/english/partThree/dao/SentenceDao.java" />
-        <option value="$PROJECT_DIR$/partThree/src/main/java/com/english/partThree/view/View.java" />
+        <option value="$PROJECT_DIR$/partThree/src/main/java/com/english/partThree/model/Phrasal.java" />
+        <option value="$PROJECT_DIR$/partThree/src/main/java/com/english/partThree/model/AbstractModel.java" />
         <option value="$PROJECT_DIR$/partThree/src/main/java/com/english/partThree/enums/PartOptions.java" />
+        <option value="$PROJECT_DIR$/partThree/src/main/java/com/english/partThree/enums/EditablePart.java" />
+        <option value="$PROJECT_DIR$/partThree/src/main/java/com/english/partThree/enums/LearnOptions.java" />
+        <option value="$PROJECT_DIR$/partThree/src/main/java/com/english/partThree/enums/SubMenuOptions.java" />
+        <option value="$PROJECT_DIR$/partThree/src/main/java/com/english/partThree/exception/EmptyListException.java" />
+        <option value="$PROJECT_DIR$/client/src/main/java/com/english/client/enums/Menu.java" />
+        <option value="$PROJECT_DIR$/client/src/main/java/com/english/client/App.java" />
+        <option value="$PROJECT_DIR$/partThree/src/main/java/com/english/partThree/model/Sentence.java" />
+        <option value="$PROJECT_DIR$/partTwo/src/main/java/com/english/partTwo/dao/WordsDao.java" />
+        <option value="$PROJECT_DIR$/partThree/src/main/java/com/english/partThree/dao/SentenceDao.java" />
+        <option value="$PROJECT_DIR$/partThree/src/main/java/com/english/partThree/dao/DatabaseConnection.java" />
         <option value="$PROJECT_DIR$/partThree/src/main/java/com/english/partThree/controller/LearnController.java" />
       </list>
     </option>
@@ -269,6 +246,8 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="Scope" />
+      <pane id="PackagesPane" />
       <pane id="AndroidView">
         <subPane>
           <expand>
@@ -291,7 +270,6 @@
           <select />
         </subPane>
       </pane>
-      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -342,13 +320,12 @@
               <item name="main" type="462c0819:PsiDirectoryNode" />
               <item name="java" type="462c0819:PsiDirectoryNode" />
               <item name="partTwo" type="462c0819:PsiDirectoryNode" />
-              <item name="enums" type="462c0819:PsiDirectoryNode" />
+              <item name="dao" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
         </subPane>
       </pane>
-      <pane id="PackagesPane" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -375,18 +352,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Application.SentenceDao">
-    <configuration name="App (1)" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="com.english.partOne.app.App" />
-      <module name="partOne" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="com.english.partOne.app.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-    </configuration>
+  <component name="RunManager" selected="Application.LearnController">
     <configuration name="App" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="com.english.client.App" />
       <module name="client" />
@@ -394,6 +360,17 @@
       <extension name="coverage">
         <pattern>
           <option name="PATTERN" value="com.english.client.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+    </configuration>
+    <configuration name="LearnController" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.english.partThree.controller.LearnController" />
+      <module name="partThree" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.english.partThree.controller.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -409,17 +386,6 @@
         </pattern>
       </extension>
     </configuration>
-    <configuration name="Menu" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="com.english.client.enums.Menu" />
-      <module name="client" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="com.english.client.enums.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-    </configuration>
     <configuration name="SentenceDao" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="com.english.partThree.dao.SentenceDao" />
       <module name="partThree" />
@@ -427,6 +393,17 @@
       <extension name="coverage">
         <pattern>
           <option name="PATTERN" value="com.english.partThree.dao.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+    </configuration>
+    <configuration name="View" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.english.partThree.view.View" />
+      <module name="partThree" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.english.partThree.view.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -585,17 +562,17 @@
       <item itemvalue="Maven.partTwo package" />
       <item itemvalue="Application.MainController" />
       <item itemvalue="Application.App" />
-      <item itemvalue="Application.Menu" />
-      <item itemvalue="Application.App (1)" />
       <item itemvalue="Application.SentenceDao" />
+      <item itemvalue="Application.View" />
+      <item itemvalue="Application.LearnController" />
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="Application.LearnController" />
         <item itemvalue="Application.SentenceDao" />
         <item itemvalue="Application.App" />
+        <item itemvalue="Application.View" />
         <item itemvalue="Application.MainController" />
-        <item itemvalue="Application.App (1)" />
-        <item itemvalue="Application.Menu" />
       </list>
     </recent_temporary>
   </component>
@@ -628,12 +605,16 @@
       <workItem from="1532002212389" duration="1532000" />
       <workItem from="1532089596966" duration="10786000" />
       <workItem from="1532102406431" duration="3146000" />
-      <workItem from="1532167080666" duration="1234000" />
+      <workItem from="1532167080666" duration="7250000" />
+      <workItem from="1532178848971" duration="1015000" />
+      <workItem from="1532342192139" duration="313000" />
+      <workItem from="1532364272979" duration="16933000" />
+      <workItem from="1532426228948" duration="21506000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="226611000" />
+    <option name="totallyTimeSpent" value="272394000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="27" width="1366" height="741" extended-state="6" />
@@ -642,15 +623,16 @@
       <window_info anchor="right" id="Palette" order="3" />
       <window_info anchor="bottom" id="TODO" order="6" />
       <window_info id="DB Browser" order="2" />
+      <window_info anchor="bottom" id="Messages" order="7" weight="0.32750398" />
       <window_info anchor="right" id="Palette&#9;" order="3" />
       <window_info id="Image Layers" order="2" />
       <window_info anchor="bottom" id="DB Execution Console" order="7" />
       <window_info anchor="right" id="Capture Analysis" order="3" />
-      <window_info anchor="bottom" id="Event Log" order="7" sideWeight="0.50073206" side_tool="true" weight="0.3227345" />
+      <window_info anchor="bottom" id="Event Log" order="7" sideWeight="0.5014641" side_tool="true" weight="0.31796503" />
       <window_info anchor="right" id="Maven Projects" order="3" />
       <window_info anchor="bottom" id="Database Changes" order="7" show_stripe_button="false" />
       <window_info anchor="bottom" id="Version Control" order="7" />
-      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.49926794" weight="0.32084692" />
+      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.49853587" weight="0.31796503" />
       <window_info anchor="bottom" id="Terminal" order="7" />
       <window_info id="Capture Tool" order="2" />
       <window_info id="Designer" order="2" />
@@ -662,13 +644,12 @@
       <window_info anchor="right" id="Theme Preview" order="3" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
-      <window_info anchor="bottom" id="Messages" order="7" weight="0.32750398" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
-      <window_info anchor="bottom" id="Find" order="1" weight="0.32899022" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
+      <window_info anchor="bottom" id="Find" order="1" weight="0.32899022" />
     </layout>
     <layout-to-restore>
       <window_info anchor="bottom" id="DB Execution Console" order="7" />
@@ -715,43 +696,6 @@
     </breakpoint-manager>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/partTwo/src/main/java/com/english/partTwo/enums/IMenuPrintable.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="45">
-          <caret line="3" column="8" selection-start-line="3" selection-start-column="8" selection-end-line="3" selection-end-column="8" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/partTwo/src/main/java/com/english/partTwo/models/Demo.java" />
-    <entry file="file://$PROJECT_DIR$/partTwo/src/main/java/com/english/partTwo/enums/CalcuteProportion.java" />
-    <entry file="file://$PROJECT_DIR$/partOne/src/main/java/com/english/partOne/app/App.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="75">
-          <caret line="13" column="5" lean-forward="true" selection-start-line="13" selection-start-column="5" selection-end-line="13" selection-end-column="5" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/client/src/main/java/com/english/client/enums/Menu.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="270">
-          <caret line="18" lean-forward="true" selection-start-line="18" selection-end-line="18" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/partTwo/src/main/java/com/english/partTwo/models/Word.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="411">
-          <caret line="110" column="5" selection-start-line="110" selection-start-column="5" selection-end-line="110" selection-end-column="5" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/partTwo/src/main/java/com/english/partTwo/View/MainView.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="15">
-          <caret line="1" selection-start-line="1" selection-end-line="1" />
-        </state>
-      </provider>
-    </entry>
     <entry file="jar://$MAVEN_REPOSITORY$/org/xerial/sqlite-jdbc/3.23.1/sqlite-jdbc-3.23.1-sources.jar!/org/sqlite/JDBC.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="90">
@@ -832,13 +776,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/client/src/main/java/com/english/client/App.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="336">
-          <caret line="33" column="44" selection-start-line="33" selection-start-column="44" selection-end-line="33" selection-end-column="44" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/partThree/src/main/java/com/english/partThree/dao/CsvReadable.java" />
     <entry file="file://$PROJECT_DIR$/partTwo/src/main/java/com/english/partTwo/dao/DataBaseConnection.java">
       <provider selected="true" editor-type-id="text-editor">
@@ -854,20 +791,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/partThree/src/main/java/com/english/partThree/controller/MainController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="30">
-          <caret line="2" column="27" selection-start-line="2" selection-start-column="27" selection-end-line="2" selection-end-column="27" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/partThree/src/main/java/com/english/partThree/controller/StatisticController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="30">
-          <caret line="2" column="32" selection-start-line="2" selection-start-column="32" selection-end-line="2" selection-end-column="32" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/partThree/src/main/java/com/english/partThree/controller/AmendController.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="30">
@@ -880,19 +803,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="90">
           <caret line="6" selection-start-line="6" selection-end-line="6" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/partThree/src/main/java/com/english/partThree/model/Grama.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="75">
-          <caret line="6" column="57" selection-start-line="6" selection-start-column="57" selection-end-line="6" selection-end-column="57" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -900,28 +810,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="150">
           <caret line="10" selection-start-line="10" selection-end-line="10" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/partThree/src/main/java/com/english/partThree/model/AbstractGramaModel.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#567#568#0" expanded="true" />
-            <element signature="e#599#600#0" expanded="true" />
-            <element signature="e#638#639#0" expanded="true" />
-            <element signature="e#670#671#0" expanded="true" />
-            <element signature="e#951#952#0" expanded="true" />
-            <element signature="e#993#994#0" expanded="true" />
-            <element signature="e#1046#1047#0" expanded="true" />
-            <element signature="e#1088#1089#0" expanded="true" />
-            <element signature="e#1134#1135#0" expanded="true" />
-            <element signature="e#1226#1227#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -929,22 +817,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="150">
           <caret line="10" selection-start-line="10" selection-end-line="10" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/partThree/src/main/java/com/english/partThree/model/Person.java">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/partThree/src/main/java/com/english/partThree/dao/DatabaseConnection.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <caret lean-forward="true" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -962,20 +834,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/partTwo/src/main/java/com/english/partTwo/dao/WordsDao.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="516">
-          <caret line="397" lean-forward="true" selection-start-line="397" selection-end-line="397" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/partTwo/src/main/java/com/english/partTwo/controller/MainController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="202">
-          <caret line="232" column="30" selection-start-line="232" selection-start-column="30" selection-end-line="232" selection-end-column="30" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/partTwo/src/main/java/com/english/partTwo/enums/Colors.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="30">
@@ -983,112 +841,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/partThree/src/main/java/com/english/partThree/model/Idiom.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="150">
-          <caret line="10" column="147" selection-start-line="10" selection-start-column="147" selection-end-line="10" selection-end-column="147" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/partThree/src/main/java/com/english/partThree/model/PhrasalVerbs.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="105">
-          <caret line="8" column="27" selection-start-line="7" selection-start-column="4" selection-end-line="8" selection-end-column="27" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#526#527#0" expanded="true" />
-            <element signature="e#556#557#0" expanded="true" />
-            <element signature="e#602#603#0" expanded="true" />
-            <element signature="e#640#641#0" expanded="true" />
-            <element signature="e#674#675#0" expanded="true" />
-            <element signature="e#704#705#0" expanded="true" />
-            <element signature="e#750#751#0" expanded="true" />
-            <element signature="e#788#789#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/partThree/src/main/java/com/english/partThree/model/Verb.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="150">
-          <caret line="10" column="108" selection-start-line="10" selection-start-column="108" selection-end-line="10" selection-end-column="108" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/partThree/src/main/java/com/english/partThree/model/Adjective.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="90">
           <caret line="6" column="13" selection-start-line="6" selection-start-column="13" selection-end-line="6" selection-end-column="13" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/partThree/src/main/java/com/english/partThree/model/AbstractModel.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="15">
-          <caret line="1" selection-start-line="1" selection-end-line="1" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="method#setFavorite#0;class#AbstractModel#0" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/partThree/src/main/java/com/english/partThree/enums/CsvPath.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="135">
-          <caret line="9" selection-start-line="9" selection-end-line="9" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/partThree/src/main/java/com/english/partThree/model/Sentence.java">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/partThree/src/main/java/com/english/partThree/view/View.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="135">
-          <caret line="9" column="30" selection-start-line="9" selection-start-column="30" selection-end-line="9" selection-end-column="30" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/partThree/src/main/java/com/english/partThree/controller/LearnController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="180">
-          <caret line="12" selection-start-line="12" selection-end-line="12" />
-          <folding>
-            <element signature="e#196#197#0" expanded="true" />
-            <element signature="e#226#227#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/partThree/src/main/java/com/english/partThree/dao/SentenceDao.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="171">
-          <caret line="323" column="4" selection-start-line="323" selection-start-column="4" selection-end-line="323" selection-end-column="4" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#976#1191#0" />
-            <element signature="e#1197#1373#0" />
-            <element signature="e#1379#1696#0" />
-            <element signature="e#1702#2194#0" />
-            <element signature="e#2200#2773#0" />
-            <element signature="e#2855#3973#0" />
-            <element signature="e#3979#4814#0" />
-            <element signature="e#4897#5446#0" />
-            <element signature="e#5452#6010#0" />
-            <element signature="e#6016#7881#0" />
-            <element signature="e#7887#8974#0" />
-            <element signature="e#9058#10479#0" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1099,15 +855,257 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/partThree/src/main/java/com/english/partThree/enums/PartOptions.java">
+    <entry file="file://$PROJECT_DIR$/partThree/src/main/java/com/english/partThree/view/View.java" />
+    <entry file="file://$PROJECT_DIR$/partTwo/src/main/java/com/english/partTwo/View/MainView.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="486">
-          <caret line="62" column="5" lean-forward="true" selection-start-line="62" selection-start-column="5" selection-end-line="62" selection-end-column="5" />
+        <state relative-caret-position="105">
+          <caret line="14" column="13" lean-forward="true" selection-start-line="14" selection-start-column="13" selection-end-line="14" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/partThree/src/main/java/com/english/partThree/model/Grama.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="60">
+          <caret line="5" column="27" selection-start-line="5" selection-start-column="27" selection-end-line="5" selection-end-column="27" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/partThree/src/main/java/com/english/partThree/enums/CsvPath.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="30">
+          <caret line="2" selection-start-line="2" selection-end-line="2" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/partThree/src/main/java/com/english/partThree/model/Person.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="214">
+          <caret line="32" column="24" selection-start-line="32" selection-start-column="24" selection-end-line="32" selection-end-column="24" />
+          <folding>
+            <element signature="e#636#637#0" expanded="true" />
+            <element signature="e#684#685#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/partThree/src/main/java/com/english/partThree/model/Verb.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="184">
+          <caret line="26" column="5" lean-forward="true" selection-start-line="26" selection-start-column="5" selection-end-line="26" selection-end-column="5" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="method#calculateMinMaxLevel#0;class#PartOptions#0" />
-            <element signature="e#1530#1531#0" expanded="true" />
-            <element signature="e#1596#1597#0" expanded="true" />
+            <element signature="e#808#809#0" expanded="true" />
+            <element signature="e#884#885#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/partThree/src/main/java/com/english/partThree/model/AbstractGramaModel.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="510">
+          <caret line="66" column="1" lean-forward="true" selection-start-line="66" selection-start-column="1" selection-end-line="66" selection-end-column="1" />
+          <folding>
+            <element signature="method#AbstractGramaModel#0;class#AbstractGramaModel#0" />
+            <element signature="method#upgrade#0;class#AbstractGramaModel#0" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/partThree/src/main/java/com/english/partThree/interfaces/ExAble.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="105">
+          <caret line="7" column="34" selection-start-line="7" selection-start-column="34" selection-end-line="7" selection-end-column="34" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/partThree/src/main/java/com/english/partThree/controller/MainController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="30">
+          <caret line="2" column="27" selection-start-line="2" selection-start-column="27" selection-end-line="2" selection-end-column="27" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/partThree/src/main/java/com/english/partThree/controller/StatisticController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="30">
+          <caret line="2" column="32" selection-start-line="2" selection-start-column="32" selection-end-line="2" selection-end-column="32" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/partThree/src/main/java/com/english/partThree/model/Phrasal.java">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/partThree/src/main/java/com/english/partThree/model/Idiom.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="30">
+          <caret line="6" column="27" lean-forward="true" selection-start-line="6" selection-start-column="27" selection-end-line="6" selection-end-column="27" />
+          <folding>
+            <element signature="e#695#696#0" expanded="true" />
+            <element signature="e#733#734#0" expanded="true" />
+            <element signature="e#779#780#0" expanded="true" />
+            <element signature="e#817#818#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/partThree/src/main/java/com/english/partThree/enums/EditablePart.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="165">
+          <caret line="11" lean-forward="true" selection-start-line="11" selection-end-line="11" />
+          <folding>
+            <element signature="e#216#217#0" expanded="true" />
+            <element signature="e#252#253#0" expanded="true" />
+            <element signature="e#282#283#0" expanded="true" />
+            <element signature="e#311#312#0" expanded="true" />
+            <element signature="e#194#195#0" expanded="true" />
+            <element signature="e#247#248#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/partThree/src/main/java/com/english/partThree/model/AbstractModel.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="225">
+          <caret line="19" column="15" lean-forward="true" selection-start-line="19" selection-start-column="15" selection-end-line="19" selection-end-column="15" />
+          <folding>
+            <element signature="method#AbstractModel#0;class#AbstractModel#0" />
+            <element signature="method#setFavorite#0;class#AbstractModel#0" />
+            <element signature="method#upgrade#0;class#AbstractModel#0" />
+            <element signature="method#modify#0;class#AbstractModel#0" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/partThree/src/main/java/com/english/partThree/enums/SubMenuOptions.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="120">
+          <caret line="8" selection-start-line="8" selection-end-line="8" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/partThree/src/main/java/com/english/partThree/enums/PartOptions.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="180">
+          <caret line="12" selection-start-line="12" selection-end-line="12" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="method#print#0;class#PartOptions#0" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/partThree/src/main/java/com/english/partThree/enums/LearnOptions.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="165">
+          <caret line="11" column="49" lean-forward="true" selection-start-line="11" selection-start-column="49" selection-end-line="11" selection-end-column="49" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/partThree/src/main/java/com/english/partThree/exception/EmptyListException.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="45">
+          <caret line="3" column="47" selection-start-line="3" selection-start-column="47" selection-end-line="3" selection-end-column="47" />
+          <folding>
+            <element signature="e#170#171#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/client/src/main/java/com/english/client/App.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="255">
+          <caret line="23" column="65" lean-forward="true" selection-start-line="23" selection-start-column="65" selection-end-line="23" selection-end-column="65" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/client/src/main/java/com/english/client/enums/Menu.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="135">
+          <caret line="9" column="12" lean-forward="true" selection-start-line="9" selection-start-column="12" selection-end-line="9" selection-end-column="12" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/partThree/src/main/java/com/english/partThree/model/Sentence.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <caret lean-forward="true" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="method#printPL#0;class#Sentence#0" />
+            <element signature="method#printENG#0;class#Sentence#0" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/partTwo/src/main/java/com/english/partTwo/controller/MainController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="180">
+          <caret line="23" column="13" lean-forward="true" selection-start-line="23" selection-start-column="13" selection-end-line="23" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/partTwo/src/main/java/com/english/partTwo/dao/WordsDao.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="148">
+          <caret line="61" column="94" lean-forward="true" selection-start-line="61" selection-start-column="94" selection-end-line="61" selection-end-column="94" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/partThree/src/main/java/com/english/partThree/dao/SentenceDao.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <folding>
+            <element signature="e#712#970#0" />
+            <element signature="e#1053#1268#0" />
+            <element signature="e#1274#1450#0" />
+            <element signature="e#2277#2850#0" />
+            <element signature="e#2932#4050#0" />
+            <element signature="e#4056#4162#0" />
+            <element signature="e#4056#4891#0" />
+            <element signature="e#4974#5523#0" />
+            <element signature="e#5529#6085#0" />
+            <element signature="e#6091#8042#0" />
+            <element signature="e#8048#9228#0" />
+            <element signature="e#9234#9857#0" />
+            <element signature="e#9940#11361#0" />
+            <element signature="e#12252#12864#0" />
+            <element signature="e#13062#13836#0" />
+            <element signature="e#13190#13658#0" />
+            <element signature="method#getByFavorite#0;class#SentenceDao#0" />
+            <element signature="method#isFavoritePossible#0;class#SentenceDao#0" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/partThree/src/main/java/com/english/partThree/dao/DatabaseConnection.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="15">
+          <caret line="1" selection-start-line="1" selection-end-line="1" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/partThree/src/main/java/com/english/partThree/controller/LearnController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="method#startController#0;class#LearnController#0" />
+            <element signature="method#getRandomInt#0;class#LearnController#0" />
+            <element signature="method#getRandomIntForLevel#0;class#LearnController#0" />
+            <element signature="method#sleep#0;class#LearnController#0" />
+            <element signature="method#cleaner#0;class#LearnController#0" />
+            <element signature="method#display#0;class#LearnController#0" />
+            <element signature="method#handleSubMenu#0;class#LearnController#0" />
+            <element signature="method#editHandle#0;class#LearnController#0" />
+            <element signature="method#favoriteHandle#0;class#LearnController#0" />
+            <element signature="method#chooseLevelForEachPart#0;class#LearnController#0" />
+            <element signature="method#startAll#0;class#LearnController#0" />
+            <element signature="method#startLevelLimited#0;class#LearnController#0" />
+            <element signature="method#startSelectedLevel#0;class#LearnController#0" />
+            <element signature="method#startMostLeastRepeated#0;class#LearnController#0" />
+            <element signature="method#startByDatetime#0;class#LearnController#0" />
+            <element signature="method#createSentences#0;class#LearnController#0" />
+            <element signature="method#startFavorite#0;class#LearnController#0" />
           </folding>
         </state>
       </provider>

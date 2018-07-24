@@ -38,12 +38,12 @@ public enum PartOptions {
         int max = 0;
 
         int amountForLevel = Math.floorDiv(maxId, amountOfLevels);
-        int min = selectedLevel * (amountForLevel - 1);
+        int min = ((selectedLevel-1) * amountForLevel) + 1;
 
-        if (selectedLevel == amountForLevel) {
-            max = amountForLevel;
+        if (selectedLevel == amountOfLevels) {
+            max = amountOfLevels;
         } else {
-            max = selectedLevel * (amountForLevel);
+            max = selectedLevel * amountForLevel;
         }
 
         values.add(min);
@@ -53,7 +53,7 @@ public enum PartOptions {
 
     @Override
     public String toString() {
-        return String.format("%d: %s", this.ordinal() + 1);
+        return String.format("%d: %s", this.ordinal() + 1, this.name());
     }
 
     public static void print() {
