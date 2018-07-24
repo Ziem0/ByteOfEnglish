@@ -4,6 +4,7 @@ public enum Menu {
 
     GRAMA,
     WORDS_3000,
+    MIXED_SENTENCES,
     CLOSE_PROGRAM;
 
     @Override

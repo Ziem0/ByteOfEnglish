@@ -9,7 +9,7 @@ import java.sql.SQLException;
 
 public class DatabaseConnection {
 
-    private static final String DB_URL = "partThree/src/main/resources/data.db";
+    private static final String DB_URL = "jdbc:sqlite:partThree/src/main/resources/database.db";
     private static Connection conn = null;
 
     private DatabaseConnection() {

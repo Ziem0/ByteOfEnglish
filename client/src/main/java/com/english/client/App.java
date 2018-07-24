@@ -1,6 +1,7 @@
 package com.english.client;
 
 import com.english.client.enums.Menu;
+import com.english.partThree.controller.LearnController;
 import com.english.partTwo.View.MainView;
 import com.english.partTwo.controller.MainController;
 import com.english.partTwo.enums.Colors;
@@ -11,8 +12,8 @@ public class App {
 
     private static final int GRAMA = 1;
     private static final int WORDS_3000 = 2;
-    private static final int CLOSE_PROGRAM = 3;
-    private static Menu menu;
+    private static final int MIXED_SENTENCES = 3;
+    private static final int CLOSE_PROGRAM = 4;
 
     public static void main(String[] args) {
         boolean run = true;
@@ -38,6 +39,11 @@ public class App {
                     System.out.print("\033[H\033[2J");
                     System.out.flush();
                     new MainController();
+                    break;
+                case MIXED_SENTENCES:
+                    System.out.print("\033[H\033[2J");
+                    System.out.flush();
+                    new LearnController();
                     break;
                 case CLOSE_PROGRAM:
 //                    System.out.println(new String(new char[50]).replace("\0", "\r\n"));
