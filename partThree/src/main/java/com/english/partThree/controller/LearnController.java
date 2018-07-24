@@ -394,7 +394,7 @@ public class LearnController {
         createSentences(1, verbID, adjectiveID, nounID, phrasalID, idiomID);
     }
 
-    public static void main(String[] args) {
-        LearnController asd = new LearnController();
-    }
+//    public static void main(String[] args) {
+//        LearnController asd = new LearnController();
+//    }
 }

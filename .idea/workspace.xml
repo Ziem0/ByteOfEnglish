@@ -2,32 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="bcca4017-2d96-4edd-b7dd-190edb111334" name="Default" comment="k">
-      <change afterPath="$PROJECT_DIR$/partThree/src/main/java/com/english/partThree/enums/EditablePart.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/partThree/src/main/java/com/english/partThree/enums/LearnOptions.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/partThree/src/main/java/com/english/partThree/enums/SubMenuOptions.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/partThree/src/main/java/com/english/partThree/exception/EmptyListException.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/partThree/src/main/java/com/english/partThree/interfaces/ExAble.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/src/main/java/com/english/client/App.java" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/main/java/com/english/client/App.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/src/main/java/com/english/client/enums/Menu.java" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/main/java/com/english/client/enums/Menu.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/partThree/src/main/java/com/english/partThree/controller/AmendController.java" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/partThree/src/main/java/com/english/partThree/controller/LearnController.java" beforeDir="false" afterPath="$PROJECT_DIR$/partThree/src/main/java/com/english/partThree/controller/LearnController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/partThree/src/main/java/com/english/partThree/controller/MainController.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/partThree/src/main/java/com/english/partThree/controller/StatisticController.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/partThree/src/main/java/com/english/partThree/dao/DatabaseConnection.java" beforeDir="false" afterPath="$PROJECT_DIR$/partThree/src/main/java/com/english/partThree/dao/DatabaseConnection.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/partThree/src/main/java/com/english/partThree/dao/SentenceDao.java" beforeDir="false" afterPath="$PROJECT_DIR$/partThree/src/main/java/com/english/partThree/dao/SentenceDao.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/partThree/src/main/java/com/english/partThree/enums/PartOptions.java" beforeDir="false" afterPath="$PROJECT_DIR$/partThree/src/main/java/com/english/partThree/enums/PartOptions.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/partThree/src/main/java/com/english/partThree/model/AbstractGramaModel.java" beforeDir="false" afterPath="$PROJECT_DIR$/partThree/src/main/java/com/english/partThree/model/AbstractGramaModel.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/partThree/src/main/java/com/english/partThree/model/AbstractModel.java" beforeDir="false" afterPath="$PROJECT_DIR$/partThree/src/main/java/com/english/partThree/model/AbstractModel.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/partThree/src/main/java/com/english/partThree/model/Idiom.java" beforeDir="false" afterPath="$PROJECT_DIR$/partThree/src/main/java/com/english/partThree/model/Idiom.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/partThree/src/main/java/com/english/partThree/model/Person.java" beforeDir="false" afterPath="$PROJECT_DIR$/partThree/src/main/java/com/english/partThree/model/Person.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/partThree/src/main/java/com/english/partThree/model/PhrasalVerbs.java" beforeDir="false" afterPath="$PROJECT_DIR$/partThree/src/main/java/com/english/partThree/model/Phrasal.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/partThree/src/main/java/com/english/partThree/model/Sentence.java" beforeDir="false" afterPath="$PROJECT_DIR$/partThree/src/main/java/com/english/partThree/model/Sentence.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/partThree/src/main/java/com/english/partThree/model/Verb.java" beforeDir="false" afterPath="$PROJECT_DIR$/partThree/src/main/java/com/english/partThree/model/Verb.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/partThree/src/main/java/com/english/partThree/view/View.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/partThree/src/main/resources/data.db" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/partTwo/src/main/java/com/english/partTwo/dao/WordsDao.java" beforeDir="false" afterPath="$PROJECT_DIR$/partTwo/src/main/java/com/english/partTwo/dao/WordsDao.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/partTwo/src/main/resources/words.db" beforeDir="false" afterPath="$PROJECT_DIR$/partTwo/src/main/resources/words.db" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/partThree/src/main/resources/database.db" beforeDir="false" afterPath="$PROJECT_DIR$/partThree/src/main/resources/database.db" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/target/" />
     <ignored path="$PROJECT_DIR$/partOne/target/" />
@@ -63,8 +39,8 @@
       <file leaf-file-name="LearnController.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/partThree/src/main/java/com/english/partThree/controller/LearnController.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state>
-              <caret column="41" lean-forward="true" selection-start-column="41" selection-end-column="41" />
+            <state relative-caret-position="438">
+              <caret line="396" selection-start-line="396" selection-end-line="396" />
               <folding>
                 <element signature="method#LearnController#0;class#LearnController#0" />
                 <element signature="method#startController#0;class#LearnController#0" />
@@ -84,6 +60,7 @@
                 <element signature="method#startByDatetime#0;class#LearnController#0" />
                 <element signature="method#createSentences#0;class#LearnController#0" />
                 <element signature="method#startFavorite#0;class#LearnController#0" />
+                <element signature="e#17218#17264#0" />
               </folding>
             </state>
           </provider>
@@ -623,7 +600,7 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="272399000" />
+    <option name="totallyTimeSpent" value="272533000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="27" width="1366" height="741" extended-state="6" />
@@ -1056,8 +1033,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/partThree/src/main/java/com/english/partThree/controller/LearnController.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <caret column="41" lean-forward="true" selection-start-column="41" selection-end-column="41" />
+        <state relative-caret-position="438">
+          <caret line="396" selection-start-line="396" selection-end-line="396" />
           <folding>
             <element signature="method#LearnController#0;class#LearnController#0" />
             <element signature="method#startController#0;class#LearnController#0" />
@@ -1077,6 +1054,7 @@
             <element signature="method#startByDatetime#0;class#LearnController#0" />
             <element signature="method#createSentences#0;class#LearnController#0" />
             <element signature="method#startFavorite#0;class#LearnController#0" />
+            <element signature="e#17218#17264#0" />
           </folding>
         </state>
       </provider>
